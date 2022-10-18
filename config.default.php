@@ -6,8 +6,8 @@ $CONFIG = [];
 
 // Main settings
 $CONFIG['SITE_NAME'] = "GPW DEV"; //The name of your site
-$CONFIG['SITE_HOST'] = "localhost"; // The host for your site (e.g. localhost, orpheus.network)
-$CONFIG['SITE_URL'] = "http://${CONFIG['SITE_HOST']}:9000"; // The base URL to access the site (e.g. http://localhost:8080, https://orpheus.network)
+$CONFIG['SITE_HOST'] = "coldplayarchive.com"; // The host for your site (e.g. localhost, orpheus.network)
+$CONFIG['SITE_URL'] = "http://${CONFIG['SITE_HOST']}"; // The base URL to access the site (e.g. http://localhost:8080, https://orpheus.network)
 $CONFIG['SERVER_ROOT'] = "/var/www"; //The root of the server, used for includes, purpose is to shorten the path string
 $CONFIG['ANNOUNCE_URL'] = "http://${CONFIG['SITE_HOST']}:2710"; //Announce HTTP URL
 $CONFIG['VITE_SERVER'] = "http://${CONFIG['SITE_HOST']}:9002";
