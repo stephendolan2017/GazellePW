@@ -14,7 +14,6 @@ TorrentDetail
   display: flex;
   flex-direction: column;
   gap: var(--global-space-default);
-  display: none;
 }
 
 .TorrentDetail-row.is-block {
@@ -151,5 +150,8 @@ TorrentDetail
 
 .TorrentDetailSubtitle-noSubtitle {
   vertical-align: middle;
+  display: none;
+}
+.TorrentDetail-row:not(.is-subtitle):not(.is-block):not(.TorrentDetailSubtitle) {
   display: none;
 }
