@@ -221,8 +221,6 @@ class Torrents {
 				HEX(t.info_hash) AS InfoHash,
 				tbf.TorrentID AS BadFolders,
 				tfi.TorrentID AS BadFiles,
-				tns.TorrentID AS NoSub,
-				ths.TorrentID AS HardSub,
 				tct.CustomTrumpable as CustomTrumpable,
 				t.LastReseedRequest,
 				t.ID AS HasFile,
@@ -396,10 +394,6 @@ class Torrents {
 							tfi.TorrentID AS BadFiles,
 							tct.CustomTrumpable as CustomTrumpable,
 							fttd.EndTime as FreeEndTime,
-				            tns.TorrentID AS NoSub,
-				            ths.TorrentID AS HardSub,
-				            group_concat(sub.languages separator '|') as ExternalSubtitles,
-				            group_concat(sub.id separator '|') as ExternalSubtitleIDs,
                             t.Slot,
                             rt.ID as ReportID,
 				            t.FilePath,
@@ -410,9 +404,6 @@ class Torrents {
 							LEFT JOIN torrents_bad_files AS tfi ON tfi.TorrentID = t.ID
 							LEFT JOIN torrents_custom_trumpable AS tct ON tct.TorrentID = t.ID
 							LEFT JOIN freetorrents_timed as fttd on fttd.TorrentID = t.id
-                            LEFT JOIN torrents_no_sub AS tns ON tns.TorrentID = t.ID
-				            LEFT JOIN torrents_hard_sub AS ths ON ths.TorrentID = t.ID
-				            LEFT JOIN subtitles as sub on sub.torrent_id = t.id
                             LEFT JOIN reportsv2 as rt on rt.TorrentID = t.id AND rt.Status != 'Resolved'
 						WHERE t.GroupID IN ($IDs)
 						GROUP BY t.ID ORDER BY t.ID");
@@ -1311,8 +1302,6 @@ WHERE ud.TorrentID=? AND ui.NotifyOnDeleteDownloaded='1' AND ud.UserID NOT IN ({
         if (
             (!empty($Data['BadFiles'])) ||
             (!empty($Data['BadFolders'])) ||
-            (!empty($Data['NoSub'])) ||
-            (!empty($Data['HardSub'])) ||
             (!empty($Data['CustomTrumpable'])) ||
             self::is_torrent_dead($Data)
         ) {
