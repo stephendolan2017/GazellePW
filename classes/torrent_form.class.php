@@ -304,8 +304,7 @@ class TORRENT_FORM {
                 $Note = isset($Torrent['Note']) ? $Torrent['Note'] : null;
                 global $ReleaseTypes;
     ?>
-        ?>
-        <div class="TableContainer u-formUploadCollapse">
+        <div class="TableContainer">
             <table class="Form <?= $this->NewTorrent ?: 'slice' ?>">
                 <? if ($this->NewTorrent && !$this->AddFormat) { ?>
                     <tr class="Form-row is-section" id="releasetype_tr">
