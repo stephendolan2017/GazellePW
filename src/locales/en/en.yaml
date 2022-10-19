@@ -5370,17 +5370,22 @@ server.torrents.release_type: |-
   Release type
 server.torrents.release_types:
   '1': |-
-    Feature Film
+    Live Video
   '2': |-
-    Short Film
+    Live Audio
   '3': |-
-    Miniseries
+    Interview
   '4': |-
-    Stand-up Comedy
+    Music Video
   '5': |-
-    Live Performance
+    Instrumental
   '6': |-
-    Movie Collection
+    Stem/Multitrack
+  '7': |-
+    Unreleased/B-Side
+  '8': |-
+    Documentary
+
 server.torrents.remove: |-
   Remove
 server.torrents.remove_artist: |-
