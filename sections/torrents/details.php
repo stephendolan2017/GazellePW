@@ -41,12 +41,6 @@ $DoubanVote = $TorrentDetails['DoubanVote'];
 $DoubanID  = $TorrentDetails['DoubanID'];
 $Name = $TorrentDetails['Name'];
 
-    protected function render_group_name($GroupInfo) {
-        $GroupID = $GroupInfo['ID'];
-        $GroupName = (Lang::is_default() && !empty($GroupInfo['SubName'])) ? $GroupInfo['SubName'] : $GroupInfo['Name'];
-        $SubName = Lang::is_default() ? $GroupInfo['Name'] : $GroupInfo['SubName'];
-        $GroupYear = $GroupInfo['Year'];
-
 $RTTitle = empty($TorrentDetails['RTTitle']) ? Torrents::sanitizeName(html_entity_decode($Name)) : $TorrentDetails['RTTitle'];
 
 $GroupName = (Lang::is_default() && !empty($TorrentDetails['SubName'])) ? $TorrentDetails['SubName'] : $TorrentDetails['Name'];
