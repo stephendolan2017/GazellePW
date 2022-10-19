@@ -379,9 +379,9 @@ class TORRENT_FORM {
                     <?
                     ?>
                 <tr class="Form-row" id="artist_tr">
-                    <td class="Form-label"><?= t('server.common.artist') ?><span class="u-colorWarning">*</span>:</td>
+                    <td class="Form-label"><?= Lang::get('global', 'artist') ?><span class="u-colorWarning">*</span>:</td>
                     <td class="Form-items is-artist u-formUploadArtistList" id="artistfields">
-                        <p id="vawarning" class="hidden"><?= t('server.upload.artist_note') ?></p>
+                        <p id="vawarning" class="hidden"><?= Lang::get('upload', 'artist_note') ?></p>
                         <?
                             if (!empty($Torrent['Artists'])) {
                                 $FirstArtist = true;
@@ -393,17 +393,17 @@ class TORRENT_FORM {
                             <input class="Input" type="text" id="artist" name="artists[]" size="45" value="<?= display_str($Artist['name']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
                         <select class="Input" id="importance" name="importance[]" <?= $this->Disabled ?>>
                             <option class="Select-option" value="1" <?= ($Importance == '1' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.director') ?></option>
+                                <?= Lang::get('upload', 'director') ?></option>
                             <option class="Select-option" value="2" <?= ($Importance == '2' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.writer') ?></option>
+                                <?= Lang::get('upload', 'writer') ?></option>
                             <option class="Select-option" value="3" <?= ($Importance == '3' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.movie_producer') ?></option>
+                                <?= Lang::get('upload', 'movie_producer') ?></option>
                             <option class="Select-option" value="4" <?= ($Importance == '4' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.composer') ?></option>
+                                <?= Lang::get('upload', 'composer') ?></option>
                             <option class="Select-option" value="5" <?= ($Importance == '5' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.cinematographer') ?></option>
+                                <?= Lang::get('upload', 'cinematographer') ?></option>
                             <option class="Select-option" value="6" <?= ($Importance == '6' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= t('server.upload.actor') ?></option>
+                                <?= Lang::get('upload', 'actor') ?></option>
                         </select>
                         <?
                             if ($FirstArtist) {
