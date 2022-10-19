@@ -118,6 +118,7 @@ TorrentDetail
   align-items: center;
   column-gap: var(--global-space-sm);
   flex-wrap: wrap;
+  display: none;
 }
 
 .TorrentDetailfileList-fileItem {
@@ -144,8 +145,10 @@ TorrentDetail
 
 .TorrentDetailSubtitle-title {
   vertical-align: middle;
+  display: none;
 }
 
 .TorrentDetailSubtitle-noSubtitle {
   vertical-align: middle;
+  display: none;
 }
