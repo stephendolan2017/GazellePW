@@ -206,8 +206,10 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                     <td class="Form-label"><?= t('server.torrents.basic') ?>:</td>
                     <td class="Form-inputs is-splitEven">
                         <input class="is-movieName Input" type="text" spellcheck="false" size="40" name="groupname" placeholder="<?= t('server.common.movie_name_title') ?>" value="<? Format::form('groupname') ?>" />
+                        <!--<input class="is-artist Input" type="text" spellcheck="false" size="40" name="artistname" placeholder="<?= t('server.common.artist') ?>" value="<? Format::form('artistname') ?>" /> -->
+                        
                         <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
-                        <select class="Input" id="artist" name="artists[]">
+                        <select class="Input" id="artist" name="artistname">
                             <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
                             <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
                             <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
@@ -218,6 +220,7 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                             <option class="Select-option" value="A Rush of Blood To The Head Era">A Rush of Blood To The Head Era</option>
                             <option class="Select-option" value="Parachutes Era">Parachutes Era</option>
                         </select>
+                        
                         <input class="is-year Input" type="text" spellcheck="false" size="40" name="year" placeholder="<?= t('server.common.year') ?>" value="<? Format::form('year') ?>" />
                     </td>
                 </tr>
