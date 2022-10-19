@@ -171,7 +171,7 @@ class TORRENT_FORM {
                 $Torrent = $this->Torrent;
                 ?>
                 </div>
-                <div class="TableContainer u-formUploadCollapse buttons" id="set_free_torrent">
+                <div class="TableContainer buttons" id="set_free_torrent">
                     <table class="layout border slice" cellpadding="3" cellspacing="1" border="0" width="100%">
                         <?
                         if (!$this->NewTorrent) {
