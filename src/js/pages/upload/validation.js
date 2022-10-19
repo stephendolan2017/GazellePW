@@ -132,17 +132,6 @@ export function registerValidation() {
     messageKey: 'client.upload.mediainfo_table_space',
   })
 
-  addValidator({
-    selector: `[name="release_desc"]`,
-    validate: validateDescImg3Png,
-    messageKey: 'client.upload.desc_img_3_png',
-  })
-  addValidator({
-    selector: `[name="release_desc"]`,
-    validate: validateDescImgHosts,
-    messageKey: 'client.upload.desc_img_hosts',
-  })
-
   addValidatorSelectInput({
     selector: `[name="codec"]`,
     validate: validateSelectInputRequired,
