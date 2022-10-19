@@ -186,7 +186,7 @@ foreach ($GroupIDs as $GroupID) {
     $JsonTorrents[] = array(
         'groupId' => (int)$GroupID,
         'groupName' => $GroupName,
-        'groupYear' => (int)$GroupYear,
+        'groupYear' => $GroupYear,
         'groupCategoryID' => $GroupCategoryID,
         'tags' => $TagList,
         'releaseType' => (int)$ReleaseType,
