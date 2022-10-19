@@ -662,26 +662,10 @@ class TorrentTableView {
 
     ?>
         <div class="TableTorrent-movieInfoFacts ">
-            <a class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.common.imdb_rating') ?>, <?= $Group['IMDBVote'] . ' ' . t('server.torrents.movie_votes') ?>" target="_blank" href="https://www.imdb.com/title/<?= $Group['IMDBID'] ?>">
-                <?= icon('imdb-gray') ?>
-                <span><?= !empty($Group['IMDBRating']) ? sprintf("%.1f", $Group['IMDBRating']) : '--' ?></span>
-            </a>
-            <a class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.common.douban_rating') ?>, <?= ($Group['DoubanVote'] ? $Group['DoubanVote'] : '?') . ' ' . t('server.torrents.movie_votes') ?>" target="_blank" href="https://movie.douban.com/subject/<?= $Group['DoubanID'] ?>/">
-                <?= icon('douban-gray') ?>
-                <span><?= !empty($Group['DoubanRating']) ? sprintf("%.1f", $Group['DoubanRating']) : '--' ?></span>
-            </a>
-            <a class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.common.rt_rating') ?>" target="_blank" href="https://www.rottentomatoes.com/m/<?= $RTTitle ?>">
-                <?= icon('rotten-tomatoes-gray') ?>
-                <span><?= !empty($Group['RTRating']) ? $Group['RTRating'] : '--' ?></span>
-            </a>
             <a class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.upload.director') ?>" href="/artist.php?id=<?= $Director['ArtistID'] ?>" dir="ltr">
                 <?= icon('movie-director') ?>
                 <span><?= Artists::display_artist($Director, false) ?></span>
             </a>
-            <span class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.torrents.imdb_region') ?>">
-                <?= icon('movie-country') ?>
-                <span><?= Torrents::format_region($Group['Region'], 2) ?></span>
-            </span>
             <span class="TableTorrent-movieInfoFactsItem" data-tooltip="<?= t('server.upload.movie_type') ?>">
                 <?= icon('movie-type') ?>
                 <span><?= t('server.torrents.release_types')[$Group['ReleaseType']] ?></span>
