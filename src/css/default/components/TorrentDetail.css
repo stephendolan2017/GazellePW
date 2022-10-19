@@ -14,6 +14,7 @@ TorrentDetail
   display: flex;
   flex-direction: column;
   gap: var(--global-space-default);
+  display: none;
 }
 
 .TorrentDetail-row.is-block {
