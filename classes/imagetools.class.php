@@ -35,7 +35,6 @@ class ImageTools {
      */
     private static $Blacklist = array(
         'tinypic.com',
-        'imgur.com',
         'funkyimg.com',
         'e-cdns-images.dzcdn.net',
         'fastpic.ru',
