@@ -600,11 +600,7 @@ class TorrentTableView {
                     ?>
                 </div>
             <? } ?>
-            <? if (!empty($Description)) { ?>
-                <div class="TorrentDetail-row is-description is-block">
-
-                </div>
-            <? } ?>
+            
         </div>
     <?
     }
