@@ -856,6 +856,12 @@ class GroupTorrentTableView extends TorrentTableView {
                 </td>
             <?  } ?>
             <td class="TableTorrent-cellMovieInfo Table-cell TableTorrent-cellMovieInfoBody" colspan="<?= $Cols ?>">
+                <div class="TableTorrent-movieInfoBody">
+                    <div class="TableTorrent-movieInfoContent">
+                        <?= $this->render_group_name($Group); ?>
+                        <?= $this->render_movie_info($Group) ?>
+                    </div>
+                </div>
             </td>
             <?
             ?>
