@@ -304,30 +304,6 @@ class TORRENT_FORM {
                 $Note = isset($Torrent['Note']) ? $Torrent['Note'] : null;
                 global $ReleaseTypes;
     ?>
-        <? if ($this->NewTorrent && !$this->AddFormat) { ?>
-            <table cellpadding="3" cellspacing="1" border="0" class="layout border<? if ($this->NewTorrent) {
-                                                                                        echo ' slice';
-                                                                                    } ?>" width="100%">
-                <tr class="Form-row">
-                    <td class="Form-label"><?= t('server.upload.movie_imdb') ?><span class="u-colorWarning">*</span>:</td>
-                    <td class="Form-items Form-errorContainer">
-                        <div class="Form-inputs">
-                            <input class="Input" type="text" id="imdb" name="imdb" size="45" placeholder="IMDB" <?= $this->Disabled ?> value=<?= $IMDBID ?>>
-                            <button class='Button autofill' variant="primary" id="imdb_button" onclick="globalapp.uploadMovieAutofill()" <?= $this->Disabled ? "disabled" : '' ?> type='button'>
-                                <span class="text"><?= t('server.upload.movie_fill') ?></span>
-                                <span class="Loader"></span>
-                            </button>
-                            <div class="Checkbox">
-                                <input class="Input" type="checkbox" name="no_imdb_link" id="no_imdb_link" onchange="globalapp.uploadNoImdbId()" <?= $this->Disabled ? "disabled" : '' ?>>
-                                <label class="Checkbox-label" data-tooltip="<?= t('server.upload.imdb_empty_warning') ?>" for="no_imdb_link">&nbsp;<?= t('server.upload.no_imdb_link') ?></label>
-                            </div>
-                        </div>
-                        <div class="u-formUploadNoImdbNote hidden u-colorWarning"><?= t('server.upload.no_imdb_note') ?></div>
-                        <div class="imdb Form-errorMessage"></div>
-                    </td>
-                </tr>
-            </table>
-        <? }
         ?>
         <div class="TableContainer u-formUploadCollapse">
             <table class="Form <?= $this->NewTorrent ?: 'slice' ?>">

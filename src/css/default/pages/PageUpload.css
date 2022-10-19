@@ -1,3 +1,8 @@
+.FormUpload:not(.u-formUploadAutoFilled, .u-formUploadNoImdbId)
+  .u-formUploadCollapse {
+  display: ;
+}
+
 @media (min-width: 768px) {
   .FormUpload .Input[type='text']:not(.is-small) {
     width: 360px;
