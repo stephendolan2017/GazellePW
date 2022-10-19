@@ -439,14 +439,7 @@ class TORRENT_FORM {
                     <option class="Select-option" value="A Rush of Blood To The Head Era">A Rush of Blood To The Head Era</option>
                     <option class="Select-option" value="Parachutes Era">Parachutes Era</option>
                 </select>
-                                    <a href="#" onclick="globalapp.uploadAddArtistField(true); return false;" class="brackets add-artist">+</a>
-                                    <a href="#" onclick="globalapp.uploadRemoveArtistField(); return false;" class="brackets remove-artist">&minus;</a>
-                                </div>
-                            <? } ?>
-                            <div class="show-more hidden">
-                                <a href='#' onclick="globalapp.uploadArtistsShowMore(); return false"><?= t('server.upload.show_more') ?></a>
-                            </div>
-                        </td>
+                </td>
                     </tr>
 
                     <tr class="Form-row">
