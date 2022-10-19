@@ -188,6 +188,7 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
             } ?>
         </div>
         <div class="MovieInfo-tagContainer">
+            <div class="MovieInfo-facts">
                 <a class="MovieInfo-fact" data-tooltip="<?= t('server.upload.director') ?>" href="/artist.php?id=<?= $Director['ArtistID'] ?>" dir="ltr">
                     <?= icon('movie-director') ?>
                     <span><?= Artists::display_artist($Director, false) ?></span>
