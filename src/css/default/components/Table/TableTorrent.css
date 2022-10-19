@@ -272,6 +272,7 @@ TableTorrent-movieInfo
   position: relative;
   height: 94px;
   width 137px;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
