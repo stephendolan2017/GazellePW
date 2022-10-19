@@ -422,11 +422,7 @@ class TORRENT_FORM {
                                 }
                             } else {
                                 ?>
-                                <div class="Form-inputs">
-                                    <input class="Input is-small" type="text" id="artist_id" name="artist_ids[]" size="45" placeholder="<?= t('server.upload.movie_imdb') ?>" />
-                                    <input class="Input is-small" type="text" id="artist" name="artists[]" size="45" <?
-                                                                                                                        Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> placeholder="<?= t('server.upload.english_name') ?>" />
-                                    <input class="Input is-small" type="text" id="artist_sub" name="artists_sub[]" size="25" placeholder="<?= t('server.upload.sub_name') ?>" <?
+                                
                                                                                                                                                                                 Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
                 <select class="Input" id="artist" name="artists[]">
                     <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
