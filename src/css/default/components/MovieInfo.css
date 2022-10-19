@@ -27,6 +27,8 @@ Where
 .MovieInfo-poster {
   border-radius: var(--global-borderRadius);
   width: 250px;
+  height: 250px;
+  object-fit: cover;
   /* height: 100%;
   min-height: 375px; */
 }
