@@ -378,70 +378,76 @@ class TORRENT_FORM {
                     </tr>
                     <?
                     ?>
-                <tr class="Form-row" id="artist_tr">
-                    <td class="Form-label"><?= Lang::get('global', 'artist') ?><span class="u-colorWarning">*</span>:</td>
-                    <td class="Form-items is-artist u-formUploadArtistList" id="artistfields">
-                        <p id="vawarning" class="hidden"><?= Lang::get('upload', 'artist_note') ?></p>
-                        <?
+                    <tr class="Form-row" id="artist_tr">
+                        <td class="Form-label"><?= t('server.common.artist') ?><span class="u-colorWarning"></span>:</td>
+                        <td class="Form-items is-artist u-formUploadArtistList" id="artistfields">
+                            <p id="vawarning" class="hidden"><?= t('server.upload.artist_note') ?></p>
+                            <?
                             if (!empty($Torrent['Artists'])) {
                                 $FirstArtist = true;
                                 foreach ($Torrent['Artists'] as $Importance => $Artists) {
                                     foreach ($Artists as $Artist) {
-                        ?>
-                        <div class="Form-inputs">
-                            <input type="hidden" id="artist_id" name="artist_ids[]" value="<?= display_str($Artist['imdbid']) ?>" size="45" />
-                            <input class="Input" type="text" id="artist" name="artists[]" size="45" value="<?= display_str($Artist['name']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
-                        <select class="Input" id="importance" name="importance[]" <?= $this->Disabled ?>>
-                            <option class="Select-option" value="1" <?= ($Importance == '1' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'director') ?></option>
-                            <option class="Select-option" value="2" <?= ($Importance == '2' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'writer') ?></option>
-                            <option class="Select-option" value="3" <?= ($Importance == '3' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'movie_producer') ?></option>
-                            <option class="Select-option" value="4" <?= ($Importance == '4' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'composer') ?></option>
-                            <option class="Select-option" value="5" <?= ($Importance == '5' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'cinematographer') ?></option>
-                            <option class="Select-option" value="6" <?= ($Importance == '6' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
-                                <?= Lang::get('upload', 'actor') ?></option>
-                        </select>
-                        <?
-                            if ($FirstArtist) {
-                                if (!$this->DisabledFlag) {
-                        ?>
-                        <a href="javascript:globalapp.uploadAddArtistField(true)" class="brackets">+</a> <a href="javascript:globalapp.globalapp.uploadRemoveArtistField()" class="brackets">&minus;</a>
-                        <?
-                            }
-                            $FirstArtist = false;
-                            }
-                        ?>
-                        </div>
-                        <?
-                            }
-                            }
+                            ?>
+                                        <div class="Form-inputs">
+                                            <input class="Input is-small" type="text" id="artist_id" name="artist_ids[]" value="<?= display_str($Artist['IMDBID']) ?>" size="45" />
+                                            <input class="Input is-small" type="text" id="artist" name="artists[]" size="45" value="<?= display_str($Artist['Name']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
+                                            <input class="Input is-small" type="text" id="artist_sub" data-tooltip="<?= t('server.upload.sub_name') ?>" name="artists_sub[]" size="25" value="<?= display_str($Artist['SubName']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
+                                            <select class="Input" id="importance" name="importance[]" <?= $this->Disabled ?>>
+                                                <option class="Select-option" value="1" <?= ($Importance == '1' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('server.upload.director') ?></option>
+                                                <option class="Select-option" value="2" <?= ($Importance == '2' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('server.upload.writer') ?></option>
+                                                <option class="Select-option" value="3" <?= ($Importance == '3' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('server.upload.movie_producer') ?></option>
+                                                <option class="Select-option" value="4" <?= ($Importance == '4' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('server.upload.composer') ?></option>
+                                                <option class="Select-option" value="5" <?= ($Importance == '5' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('server.upload.cinematographer') ?></option>
+                                                <option class="Select-option" value="6" <?= ($Importance == '6' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                                    <?= t('client.common.actor') ?></option>
+                                            </select>
+                                            <?
+                                            if ($FirstArtist) {
+                                                if (!$this->DisabledFlag) {
+                                            ?>
+                                                    <a href="javascript:globalapp.uploadAddArtistField(true)" class="brackets">+</a> <a href="javascript:globalapp.globalapp.uploadRemoveArtistField()" class="brackets">&minus;</a>
+                                            <?
+                                                }
+                                                $FirstArtist = false;
+                                            }
+                                            ?>
+                                        </div>
+                                <?
+                                    }
+                                }
                             } else {
-                        ?>
-                        <div class="Form-inputs">
-                            <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
-                            <select class="Input" id="artist" name="artists[]">
-                                <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
-                                <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
-                                <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
-                                <option class="Select-option" value="Ghost Stories Era">Ghost Stories Era</option>
-                                <option class="Select-option" value="Mylo Xyloto Era">Mylo Xyloto Era</option>
-                                <option class="Select-option" value="Viva La Vida Era">Viva La Vida Era</option>
-                                <option class="Select-option" value="X&Y Era">X&Y Era</option>
-                                <option class="Select-option" value="A Rush of Blood To The Head Era">A Rush of Blood To The Head Era</option>
-                                <option class="Select-option" value="Parachutes Era">Parachutes Era</option>
-                            </select>
-                            <style>.in{visibility:hidden;}</style>
-                            <select class="in" id="importance" name="importance[]" <?= $this->Disabled ?>>
-                                <option class="Select-option" selected="selected" value="1"><?= Lang::get('upload', 'director') ?></option>
-                            </select>
-                        </div>
-                        <? } ?>
-                    </td>
-                </tr>
+                                ?>
+                                <div class="Form-inputs">
+                                    <input class="Input is-small" type="text" id="artist_id" name="artist_ids[]" size="45" placeholder="<?= t('server.upload.movie_imdb') ?>" />
+                                    <input class="Input is-small" type="text" id="artist" name="artists[]" size="45" <?
+                                                                                                                        Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> placeholder="<?= t('server.upload.english_name') ?>" />
+                                    <input class="Input is-small" type="text" id="artist_sub" name="artists_sub[]" size="25" placeholder="<?= t('server.upload.sub_name') ?>" <?
+                                                                                                                                                                                Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
+                <select class="Input" id="artist" name="artists[]">
+                    <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
+                    <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
+                    <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
+                    <option class="Select-option" value="Ghost Stories Era">Ghost Stories Era</option>
+                    <option class="Select-option" value="Mylo Xyloto Era">Mylo Xyloto Era</option>
+                    <option class="Select-option" value="Viva La Vida Era">Viva La Vida Era</option>
+                    <option class="Select-option" value="X&Y Era">X&Y Era</option>
+                    <option class="Select-option" value="A Rush of Blood To The Head Era">A Rush of Blood To The Head Era</option>
+                    <option class="Select-option" value="Parachutes Era">Parachutes Era</option>
+                </select>
+                                    <a href="#" onclick="globalapp.uploadAddArtistField(true); return false;" class="brackets add-artist">+</a>
+                                    <a href="#" onclick="globalapp.uploadRemoveArtistField(); return false;" class="brackets remove-artist">&minus;</a>
+                                </div>
+                            <? } ?>
+                            <div class="show-more hidden">
+                                <a href='#' onclick="globalapp.uploadArtistsShowMore(); return false"><?= t('server.upload.show_more') ?></a>
+                            </div>
+                        </td>
+                    </tr>
 
                     <tr class="Form-row">
                         <td class="Form-label"><?= t('server.upload.movie_cover') ?><span class="u-colorWarning">*</span>:</td>
