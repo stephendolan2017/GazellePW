@@ -45,7 +45,7 @@ $RTTitle = empty($TorrentDetails['RTTitle']) ? Torrents::sanitizeName(html_entit
 
 $GroupName = (Lang::is_default() && !empty($TorrentDetails['SubName'])) ? $TorrentDetails['SubName'] : $TorrentDetails['Name'];
 $SubName = Lang::is_default() ? $TorrentDetails['Name'] : $TorrentDetails['SubName'];
-$GroupYear = $TorrentDetails['Year'];
+$GroupYear = $GroupInfo['Year'];
 $ReleaseType = $TorrentDetails['ReleaseType'];
 $GroupCategoryID = $TorrentDetails['CategoryID'];
 $GroupTime = $TorrentDetails['Time'];
