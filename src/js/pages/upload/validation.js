@@ -209,35 +209,6 @@ function wrap(validate) {
   }
 }
 
-export function validateDescImg3Png(value) {
-  if (!value) {
-    return false
-  }
-  const matches = value.match(/\[img=.*?png\s*]|\[img\].*?png\s*\[\/img\]/gi)
-  if (!matches) {
-    return false
-  }
-  return matches.length >= 3
-}
-
-export function validateDescImgHosts(value) {
-  if (!value) {
-    return true
-  }
-  const matches = [...value.matchAll(/(\[img=(.*?)]|\[img\](.*?)\[\/img\])/gi)]
-  const pattern = `(${IMAGE_HOSTS.join('|')})/`
-  let count = 0
-  if (matches) {
-    for (const match of matches) {
-      const img = match[2] || match[3]
-      if (img.match(pattern)) {
-        count++
-      }
-    }
-  }
-  return count >= 3
-}
-
 export function validateDescComparison(value) {
   if (!value) {
     return true
