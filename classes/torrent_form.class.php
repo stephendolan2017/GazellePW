@@ -423,7 +423,7 @@ class TORRENT_FORM {
                             } else {
                                 ?>
                                 
-                                                                                                                                                                            <?= $this->Disabled ?> />
+                                                                                                                                                                            <?= $this->Disabled ?>
                 <select class="Input" id="artist" name="artists[]">
                     <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
                     <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
