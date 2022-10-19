@@ -270,6 +270,8 @@ TableTorrent-movieInfo
   cursor: pointer;
   border-radius: var(--global-borderRadius);
   position: relative;
+  height: 105px;
+  width 137px;
 }
 
 @media (min-width: 768px) {
