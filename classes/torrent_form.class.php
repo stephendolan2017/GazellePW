@@ -454,36 +454,6 @@ class TORRENT_FORM {
                         </td>
                     </tr>
 
-                    <tr class="Form-row">
-                        <td class="Form-label"><?= t('server.upload.trailer_link') ?>:</td>
-                        <td class="Form-items">
-                            <div class="Form-inputs">
-                                <input class="Input" type="text" id="trailer_link" name="trailer_link" size="60" <?= $this->Disabled ?> />
-                            </div>
-                        </td>
-                    </tr>
-
-                    <?
-                    if ($this->NewTorrent) {
-                    ?>
-                        <tr class="Form-row">
-                            <td class="Form-label"><?= t('server.upload.tags') ?><span class="u-colorWarning">*</span>:</td>
-                            <td class="Form-items Form-errorContainer">
-                                <div class="Form-inputs">
-                                    <? if ($this->GenreTags) { ?>
-                                        <select class="Input" id="genre_tags" name="genre_tags" onchange="globalapp.uploadAddTag(); return false;" <?= $this->Disabled ?>>
-                                            <? foreach (Misc::display_array($this->GenreTags) as $Genre) { ?>
-                                                <option class="Select-option" value="<?= $Genre ?>"><?= $Genre ?></option>
-                                            <? } ?>
-                                        </select>
-                                    <? } ?>
-                                    <input class="Input" type="text" id="tags" name="tags" size="40" value="" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
-                                    <div>
-                                        <?= t('server.requests.tags_note') ?>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
                         <tr class="Form-row">
                             <td class="Form-label"><?= t('server.upload.english_movie_synopsis') ?><span class="u-colorWarning">*</span>:</td>
                             <td class="Form-items Form-errorContainer">
