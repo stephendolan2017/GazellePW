@@ -454,6 +454,18 @@ class TORRENT_FORM {
                         </td>
                     </tr>
 
+                    <tr class="Form-row">
+                        <td class="Form-label"><?= t('server.upload.trailer_link') ?>:</td>
+                        <td class="Form-items">
+                            <div class="Form-inputs">
+                                <input class="Input" type="text" id="trailer_link" name="trailer_link" size="60" <?= $this->Disabled ?> />
+                            </div>
+                        </td>
+                    </tr>
+
+                    <?
+                    if ($this->NewTorrent) {
+                    ?>
                         <tr class="Form-row">
                             <td class="Form-label"><?= t('server.upload.english_movie_synopsis') ?><span class="u-colorWarning">*</span>:</td>
                             <td class="Form-items Form-errorContainer">
