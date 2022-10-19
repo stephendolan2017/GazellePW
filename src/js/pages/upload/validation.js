@@ -7,6 +7,7 @@ const BD = ['Blu-ray']
 const SELECT_HAS_OTHER_INPUT = ['Other']
 const SELECT_REQUIRED = ['', '---']
 const IMDB_ID_PATTERN = /tt\d+/
+const IMAGE_HOSTS = ['kshare.club', 'pixhost.to', 'ptpimg.me', 'img.pterclub.com', 'yes.ilikeshots.club', 'imgbox.com']
 
 document.addEventListener('DOMContentLoaded', () => {
   registerValidation()
@@ -136,6 +137,12 @@ export function registerValidation() {
     validate: validateDescImg3Png,
     messageKey: 'client.upload.desc_img_3_png',
   })
+  addValidator({
+    selector: `[name="release_desc"]`,
+    validate: validateDescImgHosts,
+    messageKey: 'client.upload.desc_img_hosts',
+  })
+
   addValidatorSelectInput({
     selector: `[name="codec"]`,
     validate: validateSelectInputRequired,
@@ -222,6 +229,24 @@ export function validateDescImg3Png(value) {
     return false
   }
   return matches.length >= 3
+}
+
+export function validateDescImgHosts(value) {
+  if (!value) {
+    return true
+  }
+  const matches = [...value.matchAll(/(\[img=(.*?)]|\[img\](.*?)\[\/img\])/gi)]
+  const pattern = `(${IMAGE_HOSTS.join('|')})/`
+  let count = 0
+  if (matches) {
+    for (const match of matches) {
+      const img = match[2] || match[3]
+      if (img.match(pattern)) {
+        count++
+      }
+    }
+  }
+  return count >= 3
 }
 
 export function validateDescComparison(value) {
