@@ -284,6 +284,7 @@ class TorrentTableView {
         $Dead = Torrents::is_torrent_dead($Torrent);
         $Reported = !empty($Torrent['ReportID']);
         $TrumpableMsg = '';
+        $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
         $TrumpableAddExtra = '';
 
 
@@ -604,6 +605,9 @@ class TorrentTableView {
                 <div class="TorrentDetail-row is-description is-block">
                     <?= Text::full_format($Description) ?>
                 </div>
+            <div class="TorrentDetail-row is-description is-block">
+                <?= Text::full_format($WikiBody) ?>
+            </div>
             <? } ?>
         </div>
     <?
