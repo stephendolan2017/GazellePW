@@ -38,7 +38,7 @@ export default class MediainfoConverter {
   }
 
   extractContainer(info, resolution) {
-    const format = info['general']['format']
+    const format = info['general']['complete name']
     if (['PAL', 'NTSC'].includes(resolution)) {
       return 'VOB IFO'
     }
@@ -48,7 +48,7 @@ export default class MediainfoConverter {
       ? '.mp4'
       : /avi/i.test(format)
       ? 'AVI'
-      : /mpeg-ts/i.test(format)
+      : /ts/i.test(format)
       ? '.ts'
       : /dvd/i.test(format)
       ? 'VOB IFO'
