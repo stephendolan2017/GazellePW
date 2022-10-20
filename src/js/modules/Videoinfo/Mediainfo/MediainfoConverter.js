@@ -57,33 +57,7 @@ export default class MediainfoConverter {
       : 'Other'
   }
 
-  extractCodec(info) {
-    // V_MPEGH/ISO/HEVC is H265 ?
-    const completeName = info['general']['complete name']
-    const video = info['video'][0]
-    const encodingSettings = video['encoding settings']
-    const format = video['format']
-    const codecId = video['codec id']
-    return format === 'AVC'
-      ? encodingSettings
-        ? 'x264'
-        : 'H.264'
-      : format.includes('HEVC')
-      ? encodingSettings
-        ? 'x265'
-        : 'H.265'
-      : format.includes('H265')
-      ? 'H.265'
-      : format === 'MPEG-4 Visual'
-      ? codecId === 'XVID'
-        ? 'XviD'
-        : 'DivX'
-      : /dvd5/i.test(completeName)
-      ? 'DVD5'
-      : /dvd9/i.test(completeName)
-      ? 'DVD9'
-      : 'Other'
-  }
+
 
   extractProcessing(info, codec) {
     const completeName = info['general']['complete name']
