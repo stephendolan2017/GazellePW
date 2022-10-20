@@ -46,8 +46,6 @@ export default class MediainfoConverter {
       ? 'MKV'
       : /mpe?g-?4/i.test(format)
       ? '.mp4'
-      : /mpe?g/i.test(format)
-      ? 'MPG'
       : /avi/i.test(format)
       ? 'AVI'
       : /mpeg-ts/i.test(format)
