@@ -189,6 +189,18 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
         </div>
         <div class="MovieInfo-tagContainer">
             <div class="MovieInfo-facts">
+                <a class="MovieInfo-fact" data-tooltip="<?= t('server.common.imdb_rating') ?>, <?= $IMDBVote . ' ' . t('server.torrents.movie_votes') ?>" target="_blank" href="https://www.imdb.com/title/<? print_r($IMDBID) ?>">
+                    <?= icon('imdb') ?>
+                    <span><?= !empty($IMDBRating) ? sprintf("%.1f", $IMDBRating) : '--' ?></span>
+                </a>
+                <a class="MovieInfo-fact" data-tooltip="<?= t('server.common.douban_rating') ?>, <?= ($DoubanVote ? $DoubanVote : '?') . ' ' . t('server.torrents.movie_votes') ?>" target="_blank" href="https://movie.douban.com/subject/<?= $DoubanID ?>/">
+                    <?= icon('douban') ?>
+                    <span><?= !empty($DoubanRating) ? sprintf("%.1f", $DoubanRating) : '--' ?></span>
+                </a>
+                <a class="MovieInfo-fact <?= empty($RTRating) ? 'lack_of_info' : '' ?>" data-tooltip="<?= t('server.common.rt_rating') ?>" target="_blank" href="https://www.rottentomatoes.com/m/<?= $RTTitle ?>">
+                    <?= icon('rotten-tomatoes') ?>
+                    <span><?= !empty($RTRating) ? $RTRating : '--' ?></span>
+                </a>
                 <a class="MovieInfo-fact" data-tooltip="<?= t('server.upload.director') ?>" href="/artist.php?id=<?= $Director['ArtistID'] ?>" dir="ltr">
                     <?= icon('movie-director') ?>
                     <span><?= Artists::display_artist($Director, false) ?></span>
