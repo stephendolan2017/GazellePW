@@ -45,7 +45,7 @@ export default class MediainfoConverter {
     return /matroska/i.test(format)
       ? 'MKV'
       : /mpe?g-?4/i.test(format)
-      ? '.MP4'
+      ? '.mp4'
       : /mpe?g/i.test(format)
       ? 'MPG'
       : /avi/i.test(format)
