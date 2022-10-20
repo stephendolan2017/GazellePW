@@ -256,6 +256,7 @@ class TorrentTableView {
         }
         return "<i>" . $Name . "</i>";
     }
+    include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
     public function render_torrent_detail($Group, $Torrent) {
         $ReadOnly = $this->DetailOption->ReadOnly;
         $ThumbCounts = $this->DetailOption->ThumbCounts[$Torrent['ID']];
@@ -284,6 +285,7 @@ class TorrentTableView {
         $Dead = Torrents::is_torrent_dead($Torrent);
         $Reported = !empty($Torrent['ReportID']);
         $TrumpableMsg = '';
+        $WikiBody = Text::full_format($WikiBody);
         $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
         $TrumpableAddExtra = '';
 
