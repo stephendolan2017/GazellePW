@@ -5370,20 +5370,18 @@ server.torrents.release_type: |-
   Release type
 server.torrents.release_types:
   '1': |-
-    Live Video
+    Live Performance
   '2': |-
-    Live Audio
-  '3': |-
     Interview
-  '4': |-
+  '3': |-
     Music Video
-  '5': |-
+  '4': |-
     Instrumental
-  '6': |-
+  '5': |-
     Stem/Multitrack
-  '7': |-
+  '6': |-
     Unreleased/B-Side
-  '8': |-
+  '7': |-
     Documentary
 
 server.torrents.remove: |-
