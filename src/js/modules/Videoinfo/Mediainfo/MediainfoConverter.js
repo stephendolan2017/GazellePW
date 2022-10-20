@@ -54,12 +54,6 @@ export default class MediainfoConverter {
       ? 'VOB IFO'
       : 'Other'
   }
-  
-  extractContainer(info, resolution) {
-    const formatp = info['general']['complete name']
-    : /mp3/i.test(formatp)
-    ? '.mp3'
-  }
 
   extractCodec(info) {
     // V_MPEGH/ISO/HEVC is H265 ?
