@@ -269,7 +269,7 @@ class TorrentTableView {
         $Subtitles = $Torrent['Subtitles'];
         $ExternalSubtitles = $Torrent['ExternalSubtitles'];
         $ExternalSubtitleIDs = $Torrent['ExternalSubtitleIDs'];
-        $Description = $Torrent['Description'];
+        $Description = $Torrent['MainGroupDescription'];
         $Setlist = $Torrent['MainGroupDescription'];
         $MediaInfos = $Torrent['MediaInfo'];
         $Note = $Torrent['Note'];
@@ -605,11 +605,6 @@ class TorrentTableView {
                 <div class="TorrentDetail-row is-description is-block">
                     <?= Text::full_format($Description) ?>
                 </div>
-            <? } ?>
-            <? if (!empty($Setlist)) { ?>
-            <div class="TorrentDetail-row is-description is-block">
-                <?= Text::full_format($Setlist) ?>
-            </div>
             <? } ?>
         </div>
     <?
