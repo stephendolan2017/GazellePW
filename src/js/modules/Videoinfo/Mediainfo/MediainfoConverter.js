@@ -7,6 +7,7 @@ export default class MediainfoConverter {
     const processing = this.extractProcessing(info, codec)
     const resolution = this.extractResolution(info) // '720p' | ['1', '2']
     const container = this.extractContainer(info, resolution)
+    const container = this.extractContainer2(info, resolution)
     const subtitles = this.extractSubtitle(info) // ['Chinese Simplified']
     return {
       source,
@@ -55,7 +56,7 @@ export default class MediainfoConverter {
       : 'Other'
   }
   
-  extractContainer(info, resolution) {
+  extractContainer2(info, resolution) {
     const formatp = info['general']['complete name']
     : /mp3/i.test(formatp)
     ? '.mp3'
