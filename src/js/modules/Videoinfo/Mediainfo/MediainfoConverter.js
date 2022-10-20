@@ -58,8 +58,8 @@ export default class MediainfoConverter {
   }
   
   extractContainer(info, resolution) {
-    const formatp = info['general']['format profile']
-    : /layer/i.test(formatp)
+    const formatp = info['audio']['format profile']
+    : /layer 3/i.test(formatp)
     ? '.mp3'
   }
 
