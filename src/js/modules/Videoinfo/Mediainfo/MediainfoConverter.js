@@ -45,13 +45,13 @@ export default class MediainfoConverter {
     return /matroska/i.test(format)
       ? 'MKV'
       : /mp4/i.test(format)
-      ? '.mp2'
+      ? '.mp4'
       : /avi/i.test(format)
       ? 'AVI'
       : /ts/i.test(format)
       ? '.ts'
       : /mp3/i.test(format)
-      ? '.mp3'
+      ? '.mp4'
       : /dvd/i.test(format)
       ? 'VOB IFO'
       : 'Other'
