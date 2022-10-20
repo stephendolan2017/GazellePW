@@ -270,6 +270,7 @@ class TorrentTableView {
         $ExternalSubtitles = $Torrent['ExternalSubtitles'];
         $ExternalSubtitleIDs = $Torrent['ExternalSubtitleIDs'];
         $Description = $Torrent['Description'];
+        $Setlist = $Torrent['MainGroupDescription'];
         $MediaInfos = $Torrent['MediaInfo'];
         $Note = $Torrent['Note'];
         $SubtitleType = $Torrent['SubtitleType'];
@@ -284,8 +285,6 @@ class TorrentTableView {
         $Dead = Torrents::is_torrent_dead($Torrent);
         $Reported = !empty($Torrent['ReportID']);
         $TrumpableMsg = '';
-        $WikiBody = Text::full_format($WikiBody);
-        $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
         $TrumpableAddExtra = '';
 
 
@@ -607,7 +606,7 @@ class TorrentTableView {
                     <?= Text::full_format($Description) ?>
                 </div>
             <div class="TorrentDetail-row is-description is-block">
-                <?= display_str($WikiBody) ?>
+                <?= Text::full_format($Setlist) ?>
             </div>
             <? } ?>
         </div>
