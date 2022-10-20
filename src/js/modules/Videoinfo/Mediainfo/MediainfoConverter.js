@@ -38,7 +38,7 @@ export default class MediainfoConverter {
   }
 
   extractContainer(info, resolution) {
-    const format = info['general']
+    const format = info['general']['format']
     if (['PAL', 'NTSC'].includes(resolution)) {
       return 'VOB IFO'
     }
