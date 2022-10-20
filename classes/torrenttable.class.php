@@ -269,7 +269,7 @@ class TorrentTableView {
         $Subtitles = $Torrent['Subtitles'];
         $ExternalSubtitles = $Torrent['ExternalSubtitles'];
         $ExternalSubtitleIDs = $Torrent['ExternalSubtitleIDs'];
-        $Description = $Torrent['MainGroupDescription'];
+        $Description = $Torrent['Description'];
         $Setlist = $Torrent['MainGroupDescription'];
         $MediaInfos = $Torrent['MediaInfo'];
         $Note = $Torrent['Note'];
