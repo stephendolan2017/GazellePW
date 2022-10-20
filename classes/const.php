@@ -28,8 +28,8 @@ $CaptchaBGs = array(
 
 $Codecs = array('H.264', 'H.265', 'MPEG-2', 'ProRes', 'MP3', 'MP2', 'AAC', 'FLAC', 'WAV', 'Other');
 $Sources = array('VHS', 'DVD', 'HD-DVD', 'TV', 'HDTV', 'WEB', 'Blu-ray', 'Other');
-$Containers = array('AVI', 'MPG', 'MP4', 'MKV', 'VOB IFO', 'ISO', 'm2ts', 'Other');
-$Resolutions = array('480p', '480i', '576p', '576i', '720p', '1080i', '1080p', '2160p', 'Other');
+$Containers = array('.mp4', '.ts', '.mov', '.mkv', '.vob', '.mp3', '.mp2', '.m4a', '.flac', '.wav', 'Other');
+$Resolutions = array('480i', '480p', '576i', '576p', '720p', '1080i', '1080p', '2160p', 'Other/Audio Bitrate');
 $Processings = array("---", "Encode", "Remux", "DIY", "Untouched");
 
 $StandardDefinition = ['Other', 'NTSC', 'PAL', '480p', '576p'];
