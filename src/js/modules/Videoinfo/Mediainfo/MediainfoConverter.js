@@ -50,7 +50,7 @@ export default class MediainfoConverter {
       ? 'AVI'
       : /mpeg-ts/i.test(format)
       ? '.ts'
-      : /mpeg audio/i.test(format)
+      : /audio/i.test(format)
       ? '.mp3'
       : /dvd/i.test(format)
       ? 'VOB IFO'
