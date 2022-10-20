@@ -605,10 +605,8 @@ class TorrentTableView {
                 <div class="TorrentDetail-row is-description is-block">
                     <?= Text::full_format($Description) ?>
                 </div>
-            <div class=" MovieInfo-synopsis" data-tooltip="<?= t('server.torrents.fold_tooltip') ?>">
-                <p class="HtmlText">
-                    <?= display_str($WikiBody) ?>
-                </p>
+            <div class="TorrentDetail-row is-description is-block">
+                <?= display_str($WikiBody) ?>
             </div>
             <? } ?>
         </div>
