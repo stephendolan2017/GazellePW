@@ -50,8 +50,8 @@ export default class MediainfoConverter {
       ? 'MPG'
       : /avi/i.test(format)
       ? 'AVI'
-      : /m2ts/i.test(format)
-      ? 'm2ts'
+      : /mpe?g-?ts/i.test(format)
+      ? '.ts'
       : /dvd/i.test(format)
       ? 'VOB IFO'
       : 'Other'
