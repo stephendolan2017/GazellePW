@@ -256,7 +256,6 @@ class TorrentTableView {
         }
         return "<i>" . $Name . "</i>";
     }
-    include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
     public function render_torrent_detail($Group, $Torrent) {
         $ReadOnly = $this->DetailOption->ReadOnly;
         $ThumbCounts = $this->DetailOption->ThumbCounts[$Torrent['ID']];
