@@ -7,7 +7,6 @@ export default class MediainfoConverter {
     const processing = this.extractProcessing(info, codec)
     const resolution = this.extractResolution(info) // '720p' | ['1', '2']
     const container = this.extractContainer(info, resolution)
-    const container = this.extractContainer2(info, resolution)
     const subtitles = this.extractSubtitle(info) // ['Chinese Simplified']
     return {
       source,
@@ -39,7 +38,7 @@ export default class MediainfoConverter {
   }
 
   extractContainer(info, resolution) {
-    const format = info['general']['format']
+    const format = info['general']
     if (['PAL', 'NTSC'].includes(resolution)) {
       return 'VOB IFO'
     }
@@ -54,12 +53,6 @@ export default class MediainfoConverter {
       : /dvd/i.test(format)
       ? 'VOB IFO'
       : 'Other'
-  }
-  
-  extractContainer2(info, resolution) {
-    const formatp = info['general']['complete name']
-    : /mp3/i.test(formatp)
-    ? '.mp3'
   }
 
   extractCodec(info) {
