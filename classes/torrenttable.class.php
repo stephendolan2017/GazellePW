@@ -605,6 +605,8 @@ class TorrentTableView {
                 <div class="TorrentDetail-row is-description is-block">
                     <?= Text::full_format($Description) ?>
                 </div>
+            <? } ?>
+            <? if (!empty($Setlist)) { ?>
             <div class="TorrentDetail-row is-description is-block">
                 <?= Text::full_format($Setlist) ?>
             </div>
