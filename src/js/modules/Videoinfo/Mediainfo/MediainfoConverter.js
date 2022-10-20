@@ -50,16 +50,14 @@ export default class MediainfoConverter {
       ? 'AVI'
       : /mpeg-ts/i.test(format)
       ? '.ts'
-      : /layer 3/i.test(format)
-      ? '.mp3'
       : /dvd/i.test(format)
       ? 'VOB IFO'
       : 'Other'
   }
   
   extractContainer(info, resolution) {
-    const formatp = info['audio']['format profile']
-    : /layer/i.test(formatp)
+    const formatp = info['general']['complete name']
+    : /mp3/i.test(formatp)
     ? '.mp3'
   }
 
