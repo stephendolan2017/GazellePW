@@ -3,7 +3,6 @@ import { uniq, compact } from 'lodash-es'
 export default class MediainfoConverter {
   convert(info) {
     const source = this.extractSource(info)
-    const codec = this.extractCodec(info)
     const processing = this.extractProcessing(info, codec)
     const resolution = this.extractResolution(info) // '720p' | ['1', '2']
     const container = this.extractContainer(info, resolution)
