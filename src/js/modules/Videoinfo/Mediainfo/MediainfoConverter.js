@@ -42,18 +42,18 @@ export default class MediainfoConverter {
     if (['PAL', 'NTSC'].includes(resolution)) {
       return 'VOB IFO'
     }
-    return /matroska/i.test(format)
-      ? 'MKV'
-      : /mp4/i.test(format)
+    return /mp4/i.test(format)
       ? '.mp4'
-      : /avi/i.test(format)
-      ? 'AVI'
       : /ts/i.test(format)
       ? '.ts'
+      : /mov/i.test(format)
+      ? '.mov'
+      : /mkv/i.test(format)
+      ? '.mkv'
+      : /vob/i.test(format)
+      ? '.vob'
       : /mp3/i.test(format)
-      ? '.mp4'
-      : /dvd/i.test(format)
-      ? 'VOB IFO'
+      ? '.mp3'
       : 'Other'
   }
 
@@ -82,6 +82,9 @@ export default class MediainfoConverter {
       ? 'DVD5'
       : /dvd9/i.test(completeName)
       ? 'DVD9'
+      : format.includes('ProRes')
+      ? 'ProRes'
+
       : 'Other'
   }
 
@@ -123,7 +126,11 @@ export default class MediainfoConverter {
           width === '1280' ||
           (width < 1280 && height === '720')
         ? '720p'
-        : width === '1024'
+        : /576ii/i.test(completeName) ||
+        ((width === '720' || (width < 720 && height === '576')) &&
+          (scanType === 'Interlaced' || scanType === 'MBAFF'))
+        ? '576i'
+        : width === '720'
         ? '576p'
         : width === '854' || height === '480'
         ? '480p'
