@@ -60,6 +60,10 @@ export default class MediainfoConverter {
   extractCodec(info) {
     // V_MPEGH/ISO/HEVC is H265 ?
     const completeName = info['general']['complete name']
+    const video = info['video'][0]
+    const encodingSettings = video['encoding settings']
+    const format = video['format']
+    const codecId = video['codec id']
     return format === 'AVC'
       ? encodingSettings
         ? 'x264'
@@ -94,6 +98,9 @@ export default class MediainfoConverter {
 
   extractResolution(info) {
     const completeName = info['general']['complete name']
+    const video = info['video'][0]
+    const standard = video['standard']
+    const scanType = video['scan type']
 
     let width = video['width']
     let height = video['height']
