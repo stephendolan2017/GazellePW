@@ -3,6 +3,7 @@ import { uniq, compact } from 'lodash-es'
 export default class MediainfoConverter {
   convert(info) {
     const source = this.extractSource(info)
+    const codec = this.extractCodec(info)
     const processing = this.extractProcessing(info, codec)
     const resolution = this.extractResolution(info) // '720p' | ['1', '2']
     const container = this.extractContainer(info, resolution)
@@ -53,6 +54,34 @@ export default class MediainfoConverter {
       ? '.mp4'
       : /dvd/i.test(format)
       ? 'VOB IFO'
+      : 'Other'
+  }
+
+  extractCodec(info) {
+    // V_MPEGH/ISO/HEVC is H265 ?
+    const completeName = info['general']['complete name']
+    const video = info['video'][0]
+    const encodingSettings = video['encoding settings']
+    const format = video['format']
+    const codecId = video['codec id']
+    return format === 'AVC'
+      ? encodingSettings
+        ? 'x264'
+        : 'H.264'
+      : format.includes('HEVC')
+      ? encodingSettings
+        ? 'x265'
+        : 'H.265'
+      : format.includes('H265')
+      ? 'H.265'
+      : format === 'MPEG-4 Visual'
+      ? codecId === 'XVID'
+        ? 'XviD'
+        : 'DivX'
+      : /dvd5/i.test(completeName)
+      ? 'DVD5'
+      : /dvd9/i.test(completeName)
+      ? 'DVD9'
       : 'Other'
   }
 
