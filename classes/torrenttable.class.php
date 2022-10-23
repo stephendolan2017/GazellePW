@@ -296,14 +296,6 @@ class TorrentTableView {
             $TrumpableMsg .= $TrumpableAddExtra . t('server.torrents.bad_files');
             $TrumpableAddExtra = ' / ';
         }
-        if (!empty($NoSub)) {
-            $TrumpableMsg .= $TrumpableAddExtra . t('server.upload.no_sub');
-            $TrumpableAddExtra = ' / ';
-        }
-        if (!empty($HardSub)) {
-            $TrumpableMsg .= $TrumpableAddExtra . t('server.upload.hardcode_sub');
-            $TrumpableAddExtra = ' / ';
-        }
         if (!empty($CustomTrumpable)) {
             $TrumpableMsg .= $TrumpableAddExtra . $CustomTrumpable;
             $TrumpableAddExtra = ' / ';
