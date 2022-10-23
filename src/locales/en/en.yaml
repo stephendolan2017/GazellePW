@@ -39,7 +39,7 @@ client.common.confirm_username: |-
 client.common.copied: |-
   Copied
 client.common.director: |-
-  Director
+  Era
 client.common.expand_this_group: |-
   Expand this group. Hold [Command] <em>(Mac)</em> or [Ctrl] <em>(PC)</em> while clicking to expand all groups {{section}}
 client.common.hide: |-
@@ -291,7 +291,7 @@ server.apply.you_need_explain_more: |-
 server.apply.your_cover_letter: |-
   Your cover letter
 server.artist.1021: |-
-  Director
+  Era
 server.artist.1022: |-
   Writer
 server.artist.1023: |-
@@ -1060,7 +1060,7 @@ server.common.delete: |-
 server.common.modify: |-
   Modify
 server.common.director: |-
-  Director
+  Era
 server.common.douban_rating: |-
   Douban rating
 server.common.download: |-
@@ -2941,7 +2941,7 @@ server.requests.artist_note: |-
 server.requests.associated_with_the_above_torrent_group: |-
   &nbsp;associated with the above torrent group.
 server.requests.at_least_one_director: |-
-  Please enter at least one director.
+  Please enter at least one era.
 server.requests.auto_fill_note: |-
   Auto fill with IMDb or torrent group link.
 server.requests.basic_info: |-
@@ -5099,7 +5099,7 @@ server.torrents.deleted: |-
 server.torrents.desc: |-
   Descending
 server.torrents.director: |-
-  Director
+  Era
 server.torrents.diy: |-
   Self-rip
 server.torrents.diy_slot: |-
@@ -5799,7 +5799,7 @@ server.upload.danish: |-
 server.upload.dead_torrent: |-
   Dead torrent
 server.upload.director: |-
-  Director
+  Era
 server.upload.drop_area: |-
   Drop an Image here
 server.upload.dutch: |-
