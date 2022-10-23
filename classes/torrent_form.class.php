@@ -422,6 +422,7 @@ class TORRENT_FORM {
                             } else {
                         ?>
                         <div class="Form-inputs">
+                            <td class="Form-label"><?= t('server.upload.director') ?><span class="u-colorWarning">*</span>:</td>
                             <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
                             <select class="Input" id="artist" name="artists[]">
                                 <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
