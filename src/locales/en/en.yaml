@@ -5934,7 +5934,7 @@ server.upload.movie_subtitles: |-
 server.upload.movie_subtitles_note: |-
   <strong>Note: </strong>Forced Subtitles do not mean Hardcoded Subtitles.
 server.upload.movie_title: |-
-  Movie title
+  Media title
 server.upload.movie_torrent_description: |-
   Torrent description
 server.upload.movie_torrent_description_note: |-
@@ -5942,7 +5942,7 @@ server.upload.movie_torrent_description_note: |-
 server.upload.movie_trumpable: |-
   Trumpable
 server.upload.movie_type: |-
-  Movie type
+  Media type
 server.upload.movie_upload_note: |-
   <strong class='u-colorWarning'>Note: </strong>The naming rules of artists and movie names, please see Rule <a href='rules.php?p=upload#2.1' target='_blank'>2.1. Naming</a> and <a href='wiki.php?action=article&id=17' target='_blank'>Torrent Naming</a>.
 server.upload.name: |-
