@@ -379,7 +379,7 @@ class TORRENT_FORM {
                     <?
                     ?>
                 <tr class="Form-row" id="artist_tr">
-                    <td class="Form-label"><?= Lang::get('global', 'artist') ?><span class="u-colorWarning">*</span>:</td>
+                    <td class="Form-label"><?= t('server.upload.director') ?><span class="u-colorWarning">*</span>:</td>
                     <td class="Form-items is-artist u-formUploadArtistList" id="artistfields">
                         <p id="vawarning" class="hidden"><?= Lang::get('upload', 'artist_note') ?></p>
                         <?
@@ -422,7 +422,6 @@ class TORRENT_FORM {
                             } else {
                         ?>
                         <div class="Form-inputs">
-                            <td class="Form-label"><?= t('server.upload.director') ?><span class="u-colorWarning">*</span>:</td>
                             <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
                             <select class="Input" id="artist" name="artists[]">
                                 <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
