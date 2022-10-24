@@ -508,79 +508,7 @@ class TorrentTableView {
                 </div>
             <? } ?>
 
-            <div class="TorrentDetail-row is-subtitle is-block TorrentDetailSubtitle" id="subtitles_box">
-                <div class="TorrentDetailSubtitle-header" id="subtitles_box_header">
-                    <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.common.subtitles') ?>:
-
-                    </strong>
-                    <? if (!$Subtitles && !$ExternalSubtitleIDs) { ?>
-                        <span class="TorrentDetailSubtitle-noSubtitle" data-tooltip="<?= t('server.upload.no_subtitles') ?>">
-                            <?= Subtitle::icon(Subtitle::NoSubtitleitem) ?>
-                        </span>
-                    <? } ?>
-                    <span class="floatright">
-                        <? if (!$ReadOnly) { ?>
-                            <a href="subtitles.php?action=upload&torrent_id=<?= $TorrentID ?>"><?= t('server.torrents.add_subtitles') ?></a>
-
-                        <?  } ?>
-                        <? if ($ExternalSubtitleIDs) { ?>
-                            | <a class="Link" href="#" onclick="BrowseExternalSub(<?= $TorrentID ?>); return false;"><?= t('server.index.details') ?></a>
-                        <? } ?>
-                    </span>
-
-                </div>
-                <?
-                if ($Subtitles) {
-
-                    $SubtitleArray = explode(',', $Subtitles);
-                ?>
-                    <div class="TorrentDetailSubtitle-list is-internal" id="subtitles_box_in_torrent">
-                        <span class="TorrentDetailSubtitle-listTitle"><?= $SubtitleType == 1 ? t('server.common.in_torrent_subtitles') : t('server.common.in_torrent_hard_subtitles'); ?>:</span>
-                        <? foreach ($SubtitleArray as $Subtitle) { ?>
-                            <span class="TorrentDetailSubtitle-listItem" data-tooltip="<?= t("server.upload.$Subtitle") ?>">
-                                <?= icon("flag/$Subtitle") ?>
-                            </span>
-                        <? } ?>
-                    </div>
-                <?
-                }
-                if ($ExternalSubtitleIDs) {
-                    $ExternalSubtitleIDArray = explode('|', $ExternalSubtitleIDs);
-                    $ExternalSubtitleArray = explode('|', $ExternalSubtitles);
-                ?>
-                    <div class="TorrentDetailSubtitle-list is-external" id="subtitles_box_external">
-                        <span class="TorrentDetailSubtitle-listTitle">
-                            <?= t('server.common.external_subtitles') ?>:
-                        </span>
-                        <?
-                        foreach ($ExternalSubtitleIDArray as $index => $ExternalSubtitleID) {
-                            $SubtitleLanguages = $ExternalSubtitleArray[$index];
-                            $SubtitleLanguagesArray = explode(',', $SubtitleLanguages);
-                            if (in_array('chinese_simplified', $SubtitleLanguagesArray)) {
-                        ?>
-                                <a class="TorrentDetailSubtitle-listItem" href="subtitles.php?action=download&id= <?= $ExternalSubtitleID ?>" data-tooltip="<?= t('server.upload.chinese_simplified') ?>">
-                                    <?= icon('flag/chinese_simplified') ?>
-                                </a>
-                            <?
-                            } else if (in_array('chinese_traditional', $SubtitleLanguagesArray)) { ?>
-                                <a class=" TorrentDetailSubtitle-listItem" href="subtitles.php?action=download&id=<?= $ExternalSubtitleID ?>" data-tooltip="<?= t('server.upload.chinese_traditional') ?>">
-                                    <?= icon('flag/chinese_traditional') ?>
-                                </a>
-                            <?
-                            } else if ($SubtitleLanguagesArray[0]) { ?>
-                                <a class=" TorrentDetailSubtitle-listItem" href="subtitles.php?action=download&id=<?= $ExternalSubtitleID ?>" data-tooltip="<?= t("server.upload.${SubtitleLanguagesArray[0]}") ?>">
-                                    <?= icon("flag/$SubtitleLanguagesArray[0]") ?>
-                                </a>
-                        <?
-                            }
-                        }
-                        ?>
-
-                    </div>
-                    <div id="external_subtitle_container_<?= $TorrentID ?>" class="hidden"></div>
-                <?  } ?>
-
-            </div>
+            
 
 
             <? if (!empty($MediaInfos)) { ?>
@@ -661,6 +589,12 @@ class TorrentTableView {
             Votes::vote_link($GroupID, $VoteType);
         }
         ?>
+
+        <div class="TableTorrent-movieInfoSubtitle">
+            <? if ($SubName) {
+                echo display_str($SubName);
+            } ?>
+        </div>
     <?
     }
     protected function render_movie_info($Group) {
