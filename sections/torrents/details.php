@@ -25,7 +25,6 @@ $TorrentList = $TorrentCache['Torrents'];
 $View = isset($_GET['view']) ? $_GET['view'] : '';
 
 // Group details
-$WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
 $WikiImage = $TorrentDetails['WikiImage'];
 $GropuID = $TorrentDetails['ID'];
 $IMDBID = $TorrentDetails['IMDBID'];
@@ -816,7 +815,6 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
                                 $Option->BonusSended = $BonusSended;
                                 $Option->Expand = true;
                                 $Render->with_detail('detail', $Option);
-                                $Render->render_torrent_detail($TorrentDetails, $Torrent);
                                 $Render->render_torrent_detail($TorrentDetails, $Torrent);
                                 ?>
                             </td>
