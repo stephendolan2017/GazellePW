@@ -3212,7 +3212,7 @@ server.rules.upload_h13k: |-
 server.rules.upload_h13k_a: |-
   <a href='wiki.php?action=article&amp;id=140'>Scene</a> Uploads
 server.rules.upload_h22k_t: |-
-  Torrent Description
+  Setlist
 server.rules.upload_h23k_t: |-
   Movie Posters
 server.rules.upload_h24k_t: |-
@@ -5936,7 +5936,9 @@ server.upload.movie_subtitles_note: |-
 server.upload.movie_title: |-
   Media title
 server.upload.movie_torrent_description: |-
-  Torrent description
+  Setlist
+server.upload.movie_lineage: |-
+  Lineage
 server.upload.movie_torrent_description_note: |-
   We require at least three PNG screenshots (<a href="wiki.php?action=article&name=原始分辨率截图指南" target="_blank">guide</a>), and a full MediaInfo (<a href="wiki.php?action=article&name=MediaInfo+使用指南" target="_blank">guide</a>) or BDInfo (<a href="wiki.php?action=article&name=BDInfo+使用指南" target="_blank">guide</a>) log.<br/>Please consult our rules page for more information on required information.
 server.upload.movie_trumpable: |-
