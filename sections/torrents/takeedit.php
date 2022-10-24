@@ -321,7 +321,7 @@ $SQL .= "
 		Description = $T[TorrentDescription]
 	WHERE ID = $TorrentID";
 $SQL .= "
-        Description = $T[Lineage]
+        Lineage = $T[Lineage]
     WHERE ID = $TorrentID";
 $DB->query($SQL);
 
