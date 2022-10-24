@@ -613,6 +613,12 @@ class TorrentTableView {
                 <?= Text::full_format($Description) ?>
             </div>
             <? } ?>
+            <? if (!empty($TorrentNote)) { ?>
+            <div class="TorrentDetail-row is-description is-block">
+                <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.upload.movie_torrent_description') ?>:</strong><br>
+                <?= Text::full_format($TorrentNote) ?>
+            </div>
+            <? } ?>
         </div>
     <?
     }

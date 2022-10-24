@@ -288,6 +288,8 @@ class TORRENT_FORM {
                 $TorrentDescription = isset($Torrent['TorrentDescription']) ? $Torrent['TorrentDescription'] : null;
                 $Lineage = isset($Torrent['Lineage']) ?
                     $Torrent['Lineage'] : null;
+                $TorrentNote = isset($Torrent['TorrentNote']) ?
+                    $Torrent['TorrentNote'] : null;
                 $TorrentCodec = isset($Torrent['Codec']) ? $Torrent['Codec'] : null;
                 $TorrentSource = isset($Torrent['Source']) ? $Torrent['Source'] : null;
                 $TorrentContainer = isset($Torrent['Container']) ? $Torrent['Container'] : null;
@@ -922,6 +924,15 @@ class TORRENT_FORM {
                     <td class="Form-items">
                         <div class="Form-errorContainer Form-vstack">
                             <?php new TEXTAREA_PREVIEW('release_desc', 'release_desc', display_str($TorrentDescription), 60, 8, true, true, false); ?>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr class="Form-row is-description" id="description-container">
+                    <td class="Form-label"><?= t('server.upload.movie_torrent_note') ?><span class="u-colorWarning">*</span>:</td>
+                    <td class="Form-items">
+                        <div class="Form-errorContainer Form-vstack">
+                            <?php new TEXTAREA_PREVIEW('release_note', 'release_note', display_str($TorrentNote), 60, 8, true, true, false); ?>
                         </div>
                     </td>
                 </tr>
