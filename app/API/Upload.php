@@ -104,6 +104,7 @@ class Upload extends AbstractAPI {
         }
         $Properties['RemasterCustomTitle'] = html_entity_decode($_POST['remaster_custom_title'], ENT_QUOTES);
         $Properties['TorrentDescription'] = $_POST['release_desc'];
+        $Properties['Lineage'] = $_POST['lineage'];
 
         if (!empty($_POST['requestid'])) {
             $RequestID = $_POST['requestid'];
