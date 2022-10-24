@@ -84,6 +84,8 @@ export default class MediainfoConverter {
       ? 'DVD9'
       : format.includes('ProRes')
       ? 'ProRes'
+      : format.includes('MPEG Video')
+      ? 'MPEG-2'
 
       : 'Other'
   }
