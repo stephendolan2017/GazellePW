@@ -213,6 +213,7 @@ $SQL .= "
 		Subtitles = $T[Subtitles],
 		Makers = $T[Makers],
 		Scene = $T[Scene],
+        Lineage = $T[Lineage],
 		Jinzhuan = $T[Jinzhuan],
 		RemasterTitle = $T[RemasterTitle],
 		RemasterCustomTitle = $T[RemasterCustomTitle],
@@ -320,9 +321,6 @@ if (check_perms('torrents_trumpable')) {
 $SQL .= "
 		Description = $T[TorrentDescription]
 	WHERE ID = $TorrentID";
-$DB->query($SQL);
-
-$SQL .= "Lineage = $T[Lineage],";
 $DB->query($SQL);
 
 if (check_perms('torrents_freeleech') && $Properties['FreeLeech'] != $CurFreeLeech) {
