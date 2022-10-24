@@ -320,6 +320,9 @@ if (check_perms('torrents_trumpable')) {
 $SQL .= "
 		Description = $T[TorrentDescription]
 	WHERE ID = $TorrentID";
+$SQL .= "
+        Description = $T[Lineage]
+    WHERE ID = $TorrentID";
 $DB->query($SQL);
 
 if (check_perms('torrents_freeleech') && $Properties['FreeLeech'] != $CurFreeLeech) {
