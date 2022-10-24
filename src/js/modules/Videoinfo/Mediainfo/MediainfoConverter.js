@@ -62,9 +62,6 @@ export default class MediainfoConverter {
     const completeName = info['general']['complete name']
     const video = info['video'][0]
     const encodingSettings = video['encoding settings']
-    if (!encodingSettings) {
-      continue
-    }
     const format = video['format']
     const codecId = video['codec id']
     return format === 'AVC'
