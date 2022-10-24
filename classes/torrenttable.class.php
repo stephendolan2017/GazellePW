@@ -601,17 +601,16 @@ class TorrentTableView {
                     ?>
                 </div>
             <? } ?>
-            <? if (!empty($Description)) { ?>
-                <div class="TorrentDetail-row is-description is-block">
-                    <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.torrents.media_info') ?>:</strong><br>
-                    <?= Text::full_format($Description) ?>
-                </div>
-            <? } ?>
             <? if (!empty($Lineage)) { ?>
             <div class="TorrentDetail-row is-description is-block">
                 <?= Text::full_format($Lineage) ?>
             </div>
             <? } ?>
+            <? if (!empty($Description)) { ?>
+            <div class="TorrentDetail-row is-description is-block">
+                <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.torrents.media_info') ?>:</strong><br>
+                <?= Text::full_format($Description) ?>
+            </div>
         </div>
     <?
     }
