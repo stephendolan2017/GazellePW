@@ -2,6 +2,33 @@
 
 use Gazelle\API\Torrent;
 use Gazelle\Torrent\Subtitle;
+    use Gazelle\Manager\Tag;
+    use Gazelle\Torrent\TorrentSlot;
+    use Gazelle\Torrent\TorrentSlotType;
+    
+    include(CONFIG['SERVER_ROOT'] . '/classes/torrenttable.class.php');
+    function compare($X, $Y) {
+        return ($Y['score'] - $X['score']);
+    }
+    header('Access-Control-Allow-Origin: *');
+    
+    
+    $GroupID = ceil($_GET['id']);
+    if (!empty($_GET['revisionid']) && is_number($_GET['revisionid'])) {
+        $RevisionID = $_GET['revisionid'];
+    } else {
+        $RevisionID = 0;
+    }
+    
+    include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
+    $TorrentCache = Torrents::get_group($GroupID, true, $RevisionID);
+    $TorrentDetails = $TorrentCache;
+    $TorrentList = $TorrentCache['Torrents'];
+    $View = isset($_GET['view']) ? $_GET['view'] : '';
+    
+    // Group details
+    $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
+    $WikiImage = $TorrentDetails['WikiImage'];
 
 interface SortLink {
     public function link($SortKey, $DefaultWay = 'desc');
@@ -257,9 +284,6 @@ class TorrentTableView {
         return "<i>" . $Name . "</i>";
     }
     public function render_torrent_detail($Group, $Torrent) {
-        $TorrentDetails = $TorrentCache;
-        $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
-        $WikiBody = Text::full_format($WikiBody);
         $ReadOnly = $this->DetailOption->ReadOnly;
         $ThumbCounts = $this->DetailOption->ThumbCounts[$Torrent['ID']];
         $BonusSended = $this->DetailOption->BonusSended[$Torrent['ID']];
