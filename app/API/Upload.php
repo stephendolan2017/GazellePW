@@ -505,12 +505,12 @@ class Upload extends AbstractAPI {
                 (GroupID, UserID,
                 RemasterYear, RemasterTitle,
                 Scene, Jinzhuan, Diy, Buy, Allow, info_hash, FileCount, FileList,
-                FilePath, Size, Time, Description, FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
+                FilePath, Size, Time, Description, Lineage, FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
             VALUES
                 ($GroupID, $LoggedUser[ID], 
                 $T[RemasterYear], $T[RemasterTitle],
                 $T[Scene], $T[Jinzhuan],  $T[Diy],  $T[Buy],  $T[Allow], '" . db_string($InfoHash) . "', $NumFiles, '$FileString',
-                '$FilePath', $TotalSize, '" . Time::sqlTime() . "', $T[TorrentDescription], '$T[FreeLeech]', '$T[FreeLeechType]', $Checked, $T[NotMainMovie], $T[Source], $T[Codec], $T[Container], $T[Resolution], $T[Subtitles], $T[Makers], $T[Processing], $T[RemasterCustomTitle], $T[ChineseDubbed], $T[SpecialSub], $T[MediaInfo], $T[Note], $T[SubtitleType], $Slot)"
+                '$FilePath', $TotalSize, '" . Time::sqlTime() . "', $T[TorrentDescription], $T[Lineage], '$T[FreeLeech]', '$T[FreeLeechType]', $Checked, $T[NotMainMovie], $T[Source], $T[Codec], $T[Container], $T[Resolution], $T[Subtitles], $T[Makers], $T[Processing], $T[RemasterCustomTitle], $T[ChineseDubbed], $T[SpecialSub], $T[MediaInfo], $T[Note], $T[SubtitleType], $Slot)"
         );
 
 
