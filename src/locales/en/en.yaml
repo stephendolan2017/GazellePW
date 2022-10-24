@@ -5897,7 +5897,7 @@ server.upload.movie_codec: |-
 server.upload.movie_container: |-
   Container
 server.upload.movie_cover: |-
-  Cover art (optional)
+  Cover art
 server.upload.movie_edition_information: |-
   Edition information
 server.upload.movie_edition_information_examples: |-
@@ -6025,7 +6025,7 @@ server.upload.staff_note: |-
 server.upload.sub_name: |-
   Chinese name
 server.upload.sub_title: |-
-  Chinese title
+  Media Date
 server.upload.swedish: |-
   Swedish
 server.upload.tags: |-
