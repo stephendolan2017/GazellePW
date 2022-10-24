@@ -2,16 +2,6 @@
 
 use Gazelle\API\Torrent;
 use Gazelle\Torrent\Subtitle;
-    
-    include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
-    $TorrentCache = Torrents::get_group($GroupID, true, $RevisionID);
-    $TorrentDetails = $TorrentCache;
-    $TorrentList = $TorrentCache['Torrents'];
-    $View = isset($_GET['view']) ? $_GET['view'] : '';
-    
-    // Group details
-    $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
-    $WikiImage = $TorrentDetails['WikiImage'];
 
 interface SortLink {
     public function link($SortKey, $DefaultWay = 'desc');
