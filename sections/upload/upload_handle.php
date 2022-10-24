@@ -503,7 +503,7 @@ $DB->query(
 		(GroupID, UserID,
 		RemasterYear, RemasterTitle,
 		Scene, Jinzhuan, Diy, Buy, Allow, info_hash, FileCount, FileList,
-		FilePath, Size, Time, Description, Lineage FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
+		FilePath, Size, Time, Description, Lineage, FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
 	VALUES
 		($GroupID, $LoggedUser[ID], 
 		$T[RemasterYear], $T[RemasterTitle],
