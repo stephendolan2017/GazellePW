@@ -257,6 +257,7 @@ class TorrentTableView {
         return "<i>" . $Name . "</i>";
     }
     public function render_torrent_detail($Group, $Torrent) {
+        $TorrentDetails = $TorrentCache;
         $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
         $WikiBody = Text::full_format($WikiBody);
         $ReadOnly = $this->DetailOption->ReadOnly;
