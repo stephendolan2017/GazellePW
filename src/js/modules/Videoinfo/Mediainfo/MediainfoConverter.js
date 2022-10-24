@@ -128,12 +128,16 @@ export default class MediainfoConverter {
           width === '1280' ||
           (width < 1280 && height === '720')
         ? '720p'
-        : /576ii/i.test(completeName) ||
+        : /576i/i.test(completeName) ||
         ((width === '720' || (width < 720 && height === '576')) &&
           (scanType === 'Interlaced' || scanType === 'MBAFF'))
         ? '576i'
         : width === '720'
         ? '576p'
+        : /480i/i.test(completeName) ||
+        ((width === '854' || (width < 854 && height === '480')) &&
+          (scanType === 'Interlaced' || scanType === 'MBAFF'))
+        ? '480i'
         : width === '854' || height === '480'
         ? '480p'
         : standard === 'PAL'
