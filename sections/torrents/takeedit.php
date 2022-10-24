@@ -326,9 +326,7 @@ if (check_perms('torrents_freeleech') && $Properties['FreeLeech'] != $CurFreeLee
     Torrents::freeleech_torrents($TorrentID, $Properties['FreeLeech'], $Properties['FreeLeechType']);
 }
 
-    $SQL .= "
-        Lineage = $T[Lineage]
-    WHERE ID = $TorrentID";
+    $SQL .= "Lineage = $T[Lineage],";
     
 $DB->query("
 	SELECT GroupID, Time
