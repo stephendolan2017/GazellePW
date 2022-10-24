@@ -76,6 +76,7 @@ if (!EditionInfo::validate($Properties['RemasterTitle'])) {
 
 $Properties['RemasterCustomTitle'] = $_POST['remaster_custom_title'];
 $Properties['TorrentDescription'] = $_POST['release_desc'];
+$Properties['Lineage'] = $_POST['lineage'];
 $Properties['Name'] = $_POST['title'];
 if ($_POST['desc']) {
     $Properties['GroupDescription'] = $_POST['desc'];
