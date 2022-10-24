@@ -218,6 +218,13 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
                     <span><?= t('server.torrents.release_types')[$ReleaseType] ?></span>
                 </span>
             </div>
+            <div class="MovieInfo-tags">
+                <i>
+                    <?= $TagsFormat->format('torrents.php?action=advanced&amp;taglist=', '', 'MovieInfo-tag')
+                    ?>
+                </i>
+            </div>
+        </div>
 
         <div class=" MovieInfo-synopsis" data-tooltip="<?= t('server.torrents.fold_tooltip') ?>">
             <p class="HtmlText">
