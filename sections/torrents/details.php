@@ -20,11 +20,11 @@ if (!empty($_GET['revisionid']) && is_number($_GET['revisionid'])) {
 
 include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
 $TorrentCache = Torrents::get_group($GroupID, true, $RevisionID);
-$TorrentDetails = $TorrentCache;
 $TorrentList = $TorrentCache['Torrents'];
 $View = isset($_GET['view']) ? $_GET['view'] : '';
 
 // Group details
+$WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
 $WikiImage = $TorrentDetails['WikiImage'];
 $GropuID = $TorrentDetails['ID'];
 $IMDBID = $TorrentDetails['IMDBID'];
