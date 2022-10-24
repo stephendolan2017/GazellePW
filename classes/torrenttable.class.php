@@ -257,6 +257,8 @@ class TorrentTableView {
         return "<i>" . $Name . "</i>";
     }
     public function render_torrent_detail($Group, $Torrent) {
+        $WikiBody = Lang::choose_content($TorrentDetails['MainWikiBody'], $TorrentDetails['WikiBody']);
+        $WikiBody = Text::full_format($WikiBody);
         $ReadOnly = $this->DetailOption->ReadOnly;
         $ThumbCounts = $this->DetailOption->ThumbCounts[$Torrent['ID']];
         $BonusSended = $this->DetailOption->BonusSended[$Torrent['ID']];
@@ -600,7 +602,16 @@ class TorrentTableView {
                     ?>
                 </div>
             <? } ?>
-            
+            <? if (!empty($Description)) { ?>
+                <div class="TorrentDetail-row is-description is-block">
+                    <?= Text::full_format($Description) ?>
+                </div>
+            <? } ?>
+            <? if (!empty($Description)) { ?>
+            <div class="TorrentDetail-row is-description is-block">
+                <?= Text::full_format($WikiBody) ?>
+            </div>
+            <? } ?>
         </div>
     <?
     }
