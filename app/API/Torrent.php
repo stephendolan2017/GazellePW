@@ -28,6 +28,7 @@ class Torrent extends AbstractAPI {
                     t.Container,
                     t.Processing,
                     t.Source,
+                    t.Lineage
                     tls.Snatched,
                     tls.Seeders,
                     tls.Leechers
