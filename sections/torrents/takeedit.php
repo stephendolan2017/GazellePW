@@ -77,6 +77,7 @@ if (!EditionInfo::validate($Properties['RemasterTitle'])) {
 $Properties['RemasterCustomTitle'] = $_POST['remaster_custom_title'];
 $Properties['TorrentDescription'] = $_POST['release_desc'];
 $Properties['Lineage'] = $_POST['lineage'];
+$Properties['TorrentNote'] = $_POST['TorrentNote'];
 $Properties['Name'] = $_POST['title'];
 if ($_POST['desc']) {
     $Properties['GroupDescription'] = $_POST['desc'];
@@ -170,7 +171,7 @@ foreach ($Properties as $Key => $Value) {
 
 $DBTorVals = array();
 $DB->query("
-	SELECT Source, Codec, Container, Resolution, Subtitles, Makers , Scene, Jinzhuan, Diy, Buy, Allow, Description, Lineage, FileList, RemasterTitle, RemasterCustomTitle, Processing, NotMainMovie, SpecialSub, ChineseDubbed, MediaInfo, Note, SubtitleType, RemasterYear
+	SELECT Source, Codec, Container, Resolution, Subtitles, Makers , Scene, Jinzhuan, Diy, Buy, Allow, Description, Lineage, TorrentNote, FileList, RemasterTitle, RemasterCustomTitle, Processing, NotMainMovie, SpecialSub, ChineseDubbed, MediaInfo, Note, SubtitleType, RemasterYear
 	FROM torrents
 	WHERE ID = $TorrentID");
 $DBTorVals = $DB->to_array(false, MYSQLI_ASSOC, ['MediaInfo']);
@@ -214,6 +215,7 @@ $SQL .= "
 		Makers = $T[Makers],
 		Scene = $T[Scene],
         Lineage = $T[Lineage],
+        TorrentNote = $T[TorrentNote],
 		Jinzhuan = $T[Jinzhuan],
 		RemasterTitle = $T[RemasterTitle],
 		RemasterCustomTitle = $T[RemasterCustomTitle],
