@@ -170,7 +170,7 @@ foreach ($Properties as $Key => $Value) {
 
 $DBTorVals = array();
 $DB->query("
-	SELECT Source, Codec, Container, Resolution, Subtitles, Makers , Scene, Jinzhuan, Diy, Buy, Allow, Description, FileList, RemasterTitle, RemasterCustomTitle, Processing, NotMainMovie, SpecialSub, ChineseDubbed, MediaInfo, Note, SubtitleType, RemasterYear
+	SELECT Source, Codec, Container, Resolution, Subtitles, Makers , Scene, Jinzhuan, Diy, Buy, Allow, Description, Lineage, FileList, RemasterTitle, RemasterCustomTitle, Processing, NotMainMovie, SpecialSub, ChineseDubbed, MediaInfo, Note, SubtitleType, RemasterYear
 	FROM torrents
 	WHERE ID = $TorrentID");
 $DBTorVals = $DB->to_array(false, MYSQLI_ASSOC, ['MediaInfo']);
