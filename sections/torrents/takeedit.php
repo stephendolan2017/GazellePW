@@ -328,7 +328,7 @@ if (check_perms('torrents_freeleech') && $Properties['FreeLeech'] != $CurFreeLee
     
 $SQL .= "
         Lineage = $T[Lineage]
-    WHERE ID = $TorrentID";
+    WHERE TorrentID = $TorrentID";
 $DB->query($SQL);
 
 $DB->query("
