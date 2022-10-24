@@ -63,7 +63,7 @@ $HasRequest = false;
 if (empty($LoggedUser['DisableRequests']) && count($Requests) > 0) {
     $HasRequest = true;
 }
-
+$WikiBody = Text::full_format($WikiBody);
 
 $Artists = Artists::get_artist($GroupID);
 $Director = null;
@@ -218,7 +218,6 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
                     <span><?= t('server.torrents.release_types')[$ReleaseType] ?></span>
                 </span>
             </div>
-        </div>
 
         <div class=" MovieInfo-synopsis" data-tooltip="<?= t('server.torrents.fold_tooltip') ?>">
             <p class="HtmlText">
@@ -816,7 +815,7 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
                                 $Option->BonusSended = $BonusSended;
                                 $Option->Expand = true;
                                 $Render->with_detail('detail', $Option);
-                                $Render->render_torrent_detail($TorrentDetails, $Torrent);
+
                                 ?>
                             </td>
                         </tr>
