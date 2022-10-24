@@ -661,12 +661,6 @@ class TorrentTableView {
             Votes::vote_link($GroupID, $VoteType);
         }
         ?>
-
-        <div class="TableTorrent-movieInfoSubtitle">
-            <? if ($SubName) {
-                echo display_str($SubName);
-            } ?>
-        </div>
     <?
     }
     protected function render_movie_info($Group) {
