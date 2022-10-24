@@ -41,6 +41,7 @@ $DB->query("
         t.SubtitleType,
 		t.Description AS TorrentDescription,
         t.Lineage,
+        t.TorrentNote
 		tg.CategoryID,
 		tg.Name,
         tg.SubName,
