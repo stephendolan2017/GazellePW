@@ -320,9 +320,8 @@ if (check_perms('torrents_trumpable')) {
 $SQL .= "
 		Description = $T[TorrentDescription]
 	WHERE ID = $TorrentID";
-$DB->next_record();
 
-    $SQL .= "
+$SQL .= "
         Lineage = $T[Lineage]
     WHERE ID = $TorrentID";
 $DB->query($SQL);
