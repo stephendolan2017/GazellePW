@@ -61,9 +61,8 @@ export default class MediainfoConverter {
     // V_MPEGH/ISO/HEVC is H265 ?
     const completeName = info['general']['complete name']
     const video = info[][0]
-    const encodingSettings = video[]
-    const format = video[]
-    const codecId = video[]
+    const format = video['format']
+    const codecId = video['codec id']
     return format === 'AVC'
       ? encodingSettings
         ? 'x264'
