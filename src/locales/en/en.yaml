@@ -5940,7 +5940,7 @@ server.upload.movie_torrent_description: |-
 server.upload.movie_lineage: |-
   Lineage
 server.upload.movie_torrent_note: |-
-  Note:
+  Note
 server.upload.movie_torrent_description_note: |-
   We require at least three PNG screenshots (<a href="wiki.php?action=article&name=原始分辨率截图指南" target="_blank">guide</a>), and a full MediaInfo (<a href="wiki.php?action=article&name=MediaInfo+使用指南" target="_blank">guide</a>) or BDInfo (<a href="wiki.php?action=article&name=BDInfo+使用指南" target="_blank">guide</a>) log.<br/>Please consult our rules page for more information on required information.
 server.upload.movie_trumpable: |-
