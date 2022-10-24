@@ -211,6 +211,7 @@ class Torrents {
 				group_concat(sub.id separator '|') as ExternalSubtitleIDs,
 				t.Makers,
 				t.Description,
+                t.Lineage,
 				t.MediaInfo,
 				t.Note,
 				t.SubtitleType,
