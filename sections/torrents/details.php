@@ -817,6 +817,7 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
                                 $Option->Expand = true;
                                 $Render->with_detail('detail', $Option);
                                 $Render->render_torrent_detail($TorrentDetails, $Torrent);
+                                $Render->render_torrent_detail($TorrentDetails, $Torrent);
                                 ?>
                             </td>
                         </tr>
