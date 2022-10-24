@@ -909,10 +909,10 @@ class TORRENT_FORM {
                 ?>
 
                 <tr class="Form-row is-description" id="description-container">
-                    <td class="Form-label"><?= t('server.upload.movie_torrent_description') ?><span class="u-colorWarning">*</span>:</td>
+                    <td class="Form-label"><?= t('server.upload.movie_lineage') ?><span class="u-colorWarning">*</span>:</td>
                     <td class="Form-items">
                         <div class="Form-errorContainer Form-vstack">
-                            <?php new TEXTAREA_PREVIEW('release_desc', 'release_desc', display_str($TorrentDescription), 60, 8, true, true, false); ?>
+                            <?php new TEXTAREA_PREVIEW('lineage', 'lineage', display_str($Lineage), 60, 8, true, true, false); ?>
                         </div>
                     </td>
                 </tr>
@@ -921,7 +921,7 @@ class TORRENT_FORM {
                     <td class="Form-label"><?= t('server.upload.movie_torrent_description') ?><span class="u-colorWarning">*</span>:</td>
                     <td class="Form-items">
                         <div class="Form-errorContainer Form-vstack">
-                            <?php new TEXTAREA_PREVIEW('lineage', 'lineage', display_str($Lineage), 60, 8, true, true, false); ?>
+                            <?php new TEXTAREA_PREVIEW('release_desc', 'release_desc', display_str($TorrentDescription), 60, 8, true, true, false); ?>
                         </div>
                     </td>
                 </tr>

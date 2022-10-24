@@ -603,7 +603,7 @@ class TorrentTableView {
             <? } ?>
             <? if (!empty($Lineage)) { ?>
                 <div class="TorrentDetail-row is-description is-block">
-                    <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.upload.movie_lineage') ?>:</strong>
+                    <strong class="TorrentDetailSubtitle-title" id="subtitles_box_title"><?= t('server.upload.movie_lineage') ?>:</strong><br>
                     <?= Text::full_format($Lineage) ?>
                 </div>
             <? } ?>
