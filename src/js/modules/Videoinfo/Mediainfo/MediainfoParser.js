@@ -12,7 +12,7 @@ export default class MediainfoParser {
   parse(text) {
     const result = {
       general: {},
-      video: [],
+      video: {},
       audio: [],
       text: [],
       menu: {},
