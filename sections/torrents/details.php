@@ -20,6 +20,7 @@ if (!empty($_GET['revisionid']) && is_number($_GET['revisionid'])) {
 
 include(CONFIG['SERVER_ROOT'] . '/sections/torrents/functions.php');
 $TorrentCache = Torrents::get_group($GroupID, true, $RevisionID);
+$TorrentDetails = $TorrentCache;
 $TorrentList = $TorrentCache['Torrents'];
 $View = isset($_GET['view']) ? $_GET['view'] : '';
 
@@ -62,7 +63,7 @@ $HasRequest = false;
 if (empty($LoggedUser['DisableRequests']) && count($Requests) > 0) {
     $HasRequest = true;
 }
-$WikiBody = Text::full_format($WikiBody);
+
 
 $Artists = Artists::get_artist($GroupID);
 $Director = null;
