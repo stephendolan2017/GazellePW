@@ -104,6 +104,7 @@ if (!EditionInfo::validate($Properties['RemasterTitle'])) {
 }
 $Properties['RemasterCustomTitle'] = html_entity_decode($_POST['remaster_custom_title'], ENT_QUOTES);
 $Properties['TorrentDescription'] = $_POST['release_desc'];
+$Properties['Lineage'] = $_POST['lineage'];
 
 if (!empty($_POST['requestid'])) {
     $RequestID = $_POST['requestid'];
@@ -502,12 +503,12 @@ $DB->query(
 		(GroupID, UserID,
 		RemasterYear, RemasterTitle,
 		Scene, Jinzhuan, Diy, Buy, Allow, info_hash, FileCount, FileList,
-		FilePath, Size, Time, Description, FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
+		FilePath, Size, Time, Description, Lineage FreeTorrent, FreeLeechType, Checked, NotMainMovie, Source, Codec, Container, Resolution, Subtitles, Makers, Processing, RemasterCustomTitle, ChineseDubbed, SpecialSub, MediaInfo, Note, SubtitleType, Slot)
 	VALUES
 		($GroupID, $LoggedUser[ID], 
 		$T[RemasterYear], $T[RemasterTitle],
 		$T[Scene], $T[Jinzhuan],  $T[Diy],  $T[Buy],  $T[Allow], '" . db_string($InfoHash) . "', $NumFiles, '$FileString',
-		'$FilePath', $TotalSize, '" . sqltime() . "', $T[TorrentDescription], '$T[FreeLeech]', '$T[FreeLeechType]', $Checked, $T[NotMainMovie], $T[Source], $T[Codec], $T[Container], $T[Resolution], $T[Subtitles], $T[Makers], $T[Processing], $T[RemasterCustomTitle], $T[ChineseDubbed], $T[SpecialSub], $T[MediaInfo], $T[Note], $T[SubtitleType], $Slot)"
+		'$FilePath', $TotalSize, '" . sqltime() . "', $T[TorrentDescription], $T[Lineage], '$T[FreeLeech]', '$T[FreeLeechType]', $Checked, $T[NotMainMovie], $T[Source], $T[Codec], $T[Container], $T[Resolution], $T[Subtitles], $T[Makers], $T[Processing], $T[RemasterCustomTitle], $T[ChineseDubbed], $T[SpecialSub], $T[MediaInfo], $T[Note], $T[SubtitleType], $Slot)"
 );
 
 
