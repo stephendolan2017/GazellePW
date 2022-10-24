@@ -212,6 +212,7 @@ class Torrents {
 				t.Makers,
 				t.Description,
                 t.Lineage,
+                t.TorrentNote,
 				t.MediaInfo,
 				t.Note,
 				t.SubtitleType,
