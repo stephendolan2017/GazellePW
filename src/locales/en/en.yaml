@@ -5539,7 +5539,7 @@ server.torrents.space_to_space: |-
 server.torrents.split_off_into_new_group: |-
   Split Off into New Group
 server.torrents.sub_title: |-
-  Chinese title
+  Date
 server.torrents.subscribe: |-
   Subscribe
 server.torrents.successfully_sent_re_seed_request: |-
@@ -5889,9 +5889,9 @@ server.upload.mediainfo_bdinfo_placeholder: |-
 server.upload.mixed_subtitles: |-
   Softcoded subtitles
 server.upload.movie_aliases: |-
-  Chinese title
+  Date
 server.upload.movie_aliases_note: |-
-  Please enter the Chinese title.
+  Please enter the Date.
 server.upload.movie_codec: |-
   Codec
 server.upload.movie_container: |-
