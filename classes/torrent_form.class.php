@@ -452,7 +452,7 @@ class TORRENT_FORM {
                         <td class="Form-items Form-errorContainer">
                             <div class="Form-inputs">
                                 <input class="Input" type="text" ondrop="globalapp.imgDrop(event)" ondragover="globalapp.imgAllowDrop(event)" id="image" name="image" size="60" value="<?= display_str($Torrent['Image']) ?>" <?= $this->Disabled ?> />
-                                <input class="Button" type="button" onclick="globalapp.imgUpload()" <?= $this->Disabled ? "disabled" : '' ?> value="<?= t('server.upload.upload_img') ?>">
+                                <input class="Button" type="button" onclick="globalapp.uploadImage()" <?= $this->Disabled ? "disabled" : '' ?> value="<?= t('server.upload.upload_img') ?>">
                                 <span id="imgUploadPer"></span>
                             </div>
                         </td>
