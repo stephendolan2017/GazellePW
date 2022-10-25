@@ -38,7 +38,7 @@ class Misc {
                 $mail = new PHPMailer(true);
                 try {
                     if (CONFIG['MAIL_SMTP_DEBUG']) {
-                        $mail->SMTPDebug = 2;
+                        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                     }
                     $mail->isSMTP();
                     $mail->Host = 'smtp.mail.me.com'; // Specify main and backup SMTP servers
@@ -48,7 +48,7 @@ class Misc {
                     $mail->SMTPSecure = ssl;       // Enable TLS encryption, `ssl` also accepted
                     $mail->Port = '587';         // TCP port to connect to
 
-                    $mail->setFrom($From . '@' . CONFIG['MAIL_HOST'], CONFIG['SITE_NAME']);
+                    $mail->setFrom = 'no-reply@coldplayarchive.com';
                     $mail->ContentType = $ContentType;
                     $mail->addAddress($To);
                     $mail->Subject = $Subject;
