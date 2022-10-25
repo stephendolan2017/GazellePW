@@ -717,7 +717,7 @@ class TORRENT_FORM {
                         <div class="Form-inputs">
                             <div class="SelectInput">
                                 <select class="Input" id="resolution" name="resolution">
-                                    <option class="Select-option" value=""><?= t('server.upload.auto_detect') ?></option>
+                                    <option value=""><?= t('server.upload.auto_detect') ?></option>
                                     <?
                                         $ResolutionOther = null;
                                         if (!in_array($TorrentResolution, $this->Resolutions)) {
