@@ -307,7 +307,7 @@ if (!empty($_REQUEST['confirm'])) {
             $TPL->set('SITE_NAME', CONFIG['SITE_NAME']);
             $TPL->set('SITE_URL', CONFIG['SITE_URL']);
 
-            Misc::send_email($_REQUEST['email'], '激活你的 ' . CONFIG['SITE_NAME'] . ' 账号 | New account confirmation at ' . CONFIG['SITE_NAME'], $TPL->get(), 'noreply', 'text/html');
+            Misc::send_email($_REQUEST['email'], 'New account confirmation at ' . CONFIG['SITE_NAME'], $TPL->get(), 'noreply', 'text/html');
             Tracker::update_tracker('add_user', array('id' => $UserID, 'passkey' => $torrent_pass));
             $Sent = 1;
         }

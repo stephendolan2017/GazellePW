@@ -68,24 +68,7 @@ li.important{
 	background-color: #1e2538;">
 <img src="{{SITE_URL}}/static/styles/public/images/loginlogo.png" style="width: 50%;">
 </div>
-<div id="invite_mail_body" style="padding: 15px;">这封电子邮件用于激活你刚刚在 {{SITE_NAME}} 注册的账号。你需要在 24 小时内点击下方按钮来完成 {{Username}} 的整个注册流程：<br/>
-<p class="button_container" style="text-align: center;
-	margin: 10px 0;"><a class="button" target="_blank" href='{{SITE_URL}}/register.php?confirm={{TorrentKey}}' style="cursor: pointer;
-    outline: 0;
-    transition: all .1s linear;
-    background: #4285f4;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2);
-    color: #ffffff;
-    padding: 5px 10px;
-    margin: 0px 2px;
-	text-decoration: none !important;
-	font-size: 1.1rem;">激活</a></p>
-<br/>
-<hr/>
-<br/>
-This email is to confirm the account you just created at {{SITE_NAME}}. You have 24 hours to click the link below and finish the registration process for the account created with the username: {{Username}}.<br/>
+<div id="invite_mail_body" style="padding: 15px;">This email is to confirm the account you just created at {{SITE_NAME}}. You have 24 hours to click the link below and finish the registration process for the account created with the username: {{Username}}.<br/>
 <p class="button_container" style="text-align: center;
 	margin: 10px 0;"><a class="button" target="_blank" href='{{SITE_URL}}/register.php?confirm={{TorrentKey}}' style="cursor: pointer;
     outline: 0;
