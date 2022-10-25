@@ -38,7 +38,7 @@ class Misc {
                 $mail = new PHPMailer(true);
                 try {
                     if (CONFIG['MAIL_SMTP_DEBUG']) {
-                        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                        $mail->SMTPDebug = 2;
                     }
                     $mail->isSMTP();
                     $mail->Host = 'smtp.mail.me.com'; // Specify main and backup SMTP servers
