@@ -495,13 +495,6 @@ class TORRENT_FORM {
                                 <h7><?= t('server.upload.chinese_movie_synopsis_note') ?></h7>
                             </td>
                         </tr>
-                        <tr class="Form-row">
-                            <td class="Form-label"><?= t('server.upload.chinese_movie_synopsis') ?><span class="u-colorWarning">*</span>:</td>
-                            <td class="Form-items Form-errorContainer">
-                                <? new TEXTAREA_PREVIEW('desc', 'desc', display_str($Torrent['GroupDescription']), 60, 8, false, false, false, array($this->Disabled)); ?>
-                                <h7><?= t('server.upload.chinese_movie_synopsis_note') ?></h7>
-                            </td>
-                        </tr>
 
                     <? } ?>
                 <? } ?>
