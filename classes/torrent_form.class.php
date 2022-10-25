@@ -719,25 +719,22 @@ class TORRENT_FORM {
                                 <select class="Input" id="resolution" name="resolution">
                                     <option class="Select-option" value=""><?= t('server.upload.auto_detect') ?></option>
                                     <?
-                                    $resolution = $TorrentResolution;
-                                    $resolution_width = '';
-                                    if ($resolution && !in_array($resolution, $this->Resolutions)) {
-                                        $resolution = "Other";
-                                        list($resolution_width) = explode('&times;', $Torrent['Resolution']);
-                                    }
-                                    foreach (Misc::display_array($this->Resolutions) as $Resolution) {
-                                        echo "\t\t\t\t\t\t<option value=\"$Resolution\"";
-                                        if ($Resolution == $resolution) {
-                                            echo ' selected="selected"';
+                                        $ResolutionOther = null;
+                                        if (!in_array($TorrentResolution, $this->Resolutions)) {
+                                            $ResolutionOther = $TorrentResolution;
                                         }
-                                        echo ">$Resolution</option>\n";
-                                        // <option class="Select-option" value="$Resolution" selected="selected">$Resolution</option>
-                                    }
+                                        foreach (Misc::display_array($this->Resolutions) as $resolution) {
+                                            echo "\t\t\t\t\t\t<option value=\"$resolution\"";
+                                            if ($resolution == $TorrentResolution) {
+                                                echo ' selected="selected"';
+                                            } else if ($resolution == 'Other' && $ResolutionOther) {
+                                                echo ' selected="selected"';
+                                            }
+                                            echo ">$resolution</option>\n";
+                                        }
                                     ?>
                                 </select>
-                                <span class="hidden">
-                                    <input class="Input is-small" type="text" id="resolution_width" name="resolution_width" value="<?= $resolution_width ?>">
-                                </span>
+                                <input class="Input is-small hidden" type="text" name="resolution_other" value="<?= !in_array($TorrentResolution, $this->Resolutions) ? $TorrentResolution : '' ?>" />
                             </div>
                         </div>
                         <span id="resolution_warning" class="u-colorWarning"></span>

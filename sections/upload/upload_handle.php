@@ -58,8 +58,8 @@ if ($Properties['Container'] == 'Other') {
     $Properties['Container'] = $_POST['container_other'];
 }
 $Properties['Resolution'] = $_POST['resolution'];
-if ($Properties['Resolution'] == 'Other' && $_POST['resolution_width']) {
-    $Properties['Resolution'] = $_POST['resolution_width'];
+if ($Properties['Resolution'] == 'Other' && $_POST['resolution_width'] && $_POST['resolution_height']) {
+    $Properties['Resolution'] = $_POST['resolution_width'] . '×' . $_POST['resolution_height'];
 }
 $Properties['NoSub'] = isset($_POST['no_sub']) ? 1 : 0;
 $Properties['Subtitles'] = implode(',', $_POST['subtitles']);
@@ -592,6 +592,7 @@ if (trim($Properties['Image']) != '') {
         } while (0);
     }
 }
+
 if (isset($Properties['BadFolders'])) {
     $DB->query("
         INSERT INTO torrents_bad_folders
