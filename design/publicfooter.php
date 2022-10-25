@@ -2,7 +2,7 @@
 		</tr>
 		</table>
 		<div id="foot">
-			<span><a href="#"><?= CONFIG['SITE_NAME'] ?></a> </span>
+			<span><a href="https://twitter.com/"><?= CONFIG['SITE_NAME'] ?></a> </span>
 		</div>
 		</body>
 
