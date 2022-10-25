@@ -557,7 +557,7 @@ class TorrentTableView {
         $SubName = Lang::is_default() ? $GroupInfo['Name'] : $GroupInfo['SubName'];
         $GroupYear = $GroupInfo['Year'];
     ?>
-        <span class="TableTorrent-movieInfoTitle">
+        <span class="TableTorrent-movieInfoSubtitle">
             <a href="\torrents.php?id=<?= $GroupID ?>"><?= display_str($GroupName) ?></a>
             <span class="TableTorrent-movieInfoYear">(<? print_r($GroupYear) ?>)</span>
         </span>

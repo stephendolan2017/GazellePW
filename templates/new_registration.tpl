@@ -66,7 +66,7 @@ li.important{
 	text-align: center;
 	padding: 20px 0;
 	background-color: #1e2538;">
-<img src="{{SITE_URL}}/static/styles/public/images/loginlogo.png" style="width: 50%;">
+<img src="{{SITE_URL}}/src/css/publicstyle/images/loginlogo.png" style="width: 50%;">
 </div>
 <div id="invite_mail_body" style="padding: 15px;">This email is to confirm the account you just created at {{SITE_NAME}}. You have 24 hours to click the link below and finish the registration process for the account created with the username: {{Username}}.<br/>
 <p class="button_container" style="text-align: center;
