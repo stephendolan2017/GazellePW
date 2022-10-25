@@ -108,6 +108,7 @@ $CurrentLang = Lang::getCurrentLangStandard();
     }
     $Scripts = array_merge(['jquery', 'script_start', 'ajax.class', 'cookie.class', 'global', 'jquery.autocomplete', 'autocomplete', 'jquery.countdown.min', 'bbcode'], explode(',', $JSIncludes));
     ?>
+    <script src="https://kit.fontawesome.com/10e77ac204.js" crossorigin="anonymous"></script>
 </head>
 
 <?
