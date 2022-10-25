@@ -380,7 +380,7 @@ if ($_REQUEST['action']) {
                             <div class="">
                                 <i class="fa-brands fa-discord"></i>
                             </div>
-                            <div class="HeaderDonate-percent"><a>Join us on Discord!</a></div>
+                            <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>
                         </a>
                     </li>
                 </ul>
