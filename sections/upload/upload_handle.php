@@ -592,19 +592,6 @@ if (trim($Properties['Image']) != '') {
         } while (0);
     }
 }
-
-if ($Properties['NoSub']) {
-    $DB->query("
-        INSERT INTO torrents_no_sub
-        VALUES ($TorrentID, $LoggedUser[ID], '" . sqltime() . "')");
-}
-
-if ($Properties['HardSub']) {
-    $DB->query("
-        INSERT INTO torrents_hard_sub
-        VALUES ($TorrentID, $LoggedUser[ID], '" . sqltime() . "')");
-}
-
 if (isset($Properties['BadFolders'])) {
     $DB->query("
         INSERT INTO torrents_bad_folders
