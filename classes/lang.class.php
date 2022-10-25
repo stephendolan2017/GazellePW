@@ -3,11 +3,9 @@
 class Lang {
 
     const EN = 'en';
-    const CHS = 'chs';
-    const LANGS = [self::EN, self::CHS];
-    const DEFAULT_LANG = self::CHS;
+    const LANGS = [self::EN];
+    const DEFAULT_LANG = self::EN;
     const MAIN_LANG = self::EN;
-    const SUB_LANG = self::CHS;
 
     static $Locales = [];
 
