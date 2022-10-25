@@ -41,14 +41,14 @@ class Misc {
                         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                     }
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.mail.me.com'; // Specify main and backup SMTP servers
+                    $mail->Host = CONFIG['MAIL_SMTP_HOST']; // Specify main and backup SMTP servers
                     $mail->SMTPAuth = true;        // Enable SMTP authentication
-                    $mail->Username = 'stephendolan1@icloud.com';     // SMTP username
-                    $mail->Password = 'oerj-bvtt-jbwq-zpjn';       // SMTP password
-                    $mail->SMTPSecure = ssl;       // Enable TLS encryption, `ssl` also accepted
-                    $mail->Port = '587';         // TCP port to connect to
+                    $mail->Username = CONFIG['MAIL_SMTP_USERNAME'];     // SMTP username
+                    $mail->Password = CONFIG['MAIL_SMTP_PASSWORD'];       // SMTP password
+                    $mail->SMTPSecure = tls;       // Enable TLS encryption, `ssl` also accepted
+                    $mail->Port = CONFIG['MAIL_SMTP_PORT'];         // TCP port to connect to
 
-                    $mail->setFrom = 'no-reply@coldplayarchive.com';
+                    $mail->setFrom($From . '@' . CONFIG['MAIL_HOST'], CONFIG['SITE_NAME']);
                     $mail->ContentType = $ContentType;
                     $mail->addAddress($To);
                     $mail->Subject = $Subject;
