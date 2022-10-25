@@ -1,1 +1,1 @@
-globalapp.imgUpload = function uploadImage() {}
+globalapp.uploadImage = function uploadImage() {}
