@@ -30,16 +30,6 @@ define('FOOTER_FILE', CONFIG['SERVER_ROOT'] . '/design/publicfooter.php');
     <div id="head">
         <tr>
             <td>
-                <select class="Input" name="language" id="language" onchange="change_lang(this.options[this.options.selectedIndex].value)">
-                    <option class="Select-option" value="chs" <? if (empty($_COOKIE['lang']) || $_COOKIE['lang'] == 'chs') { ?>selected<? } ?>>简体中文</option>
-                    <?
-                    if (true) {
-                    ?>
-                        <option class="Select-option" value="en" <? if (!empty($_COOKIE['lang']) && $_COOKIE['lang'] == 'en') { ?>selected<? } ?>>English</option>
-                    <?
-                    }
-                    ?>
-                </select>
             </td>
         </tr>
     </div>
