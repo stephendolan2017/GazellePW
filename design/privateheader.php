@@ -377,7 +377,7 @@ if ($_REQUEST['action']) {
                     <li class="HeaderDonate-content HeaderInfo-item brackets <?= Format::add_class($PageID, array('donate'), 'active', false) ?>">
                         <a class="HeaderDonate-link LinkHeader Link" href="https://discord.gg/HvCAGwzkjV" data-tooltip="<?= t('server.donate.progress', ['Values' => [$donation->getYearProgress()]]) ?>">
                             <div class="HeaderDonate-progressBarBorder">
-                                <div class="HeaderDonate-progressBar" style="width: <?= $donation->getYearProgress() . '%' ?>"></div>
+                                <i class="fa-brands fa-discord"></i>
                             </div>
                             <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>
                         </a>
