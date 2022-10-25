@@ -374,6 +374,14 @@ if ($_REQUEST['action']) {
         <header class="LayoutPage-header Header <?= (!empty($Alerts) || !empty($ModBar)) ? 'is-hasAlerts' : '' ?>">
             <div class="HeaderInfo">
                 <ul class="HeaderDonate HeaderInfo-left">
+                    <li class="HeaderDonate-content HeaderInfo-item brackets <?= Format::add_class($PageID, array('donate'), 'active', false) ?>">
+                        <a class="HeaderDonate-link LinkHeader Link" href="https://discord.gg/HvCAGwzkjV" data-tooltip="<?= t('server.donate.progress', ['Values' => [$donation->getYearProgress()]]) ?>">
+                            <div class="HeaderDonate-progressBarBorder">
+                                <div class="HeaderDonate-progressBar" style="width: <?= $donation->getYearProgress() . '%' ?>"></div>
+                            </div>
+                            <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="HeaderStat HeaderInfo-middle">
                     <li class="HeaderStat-item is-seeding" data-tooltip="<?= t('server.common.uploaded') ?>">
