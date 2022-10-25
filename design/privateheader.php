@@ -373,16 +373,6 @@ if ($_REQUEST['action']) {
     <div class="LayoutPage <?= $PageClass ?>">
         <header class="LayoutPage-header Header <?= (!empty($Alerts) || !empty($ModBar)) ? 'is-hasAlerts' : '' ?>">
             <div class="HeaderInfo">
-                <ul class="HeaderDonate HeaderInfo-left">
-                    <li class="HeaderDonate-content HeaderInfo-item brackets <?= Format::add_class($PageID, array('donate'), 'active', false) ?>">
-                        <a class="HeaderDonate-link LinkHeader Link" href="donate.php" data-tooltip="<?= t('server.donate.progress', ['Values' => [$donation->getYearProgress()]]) ?>">
-                            <div class="HeaderDonate-progressBarBorder">
-                                <div class="HeaderDonate-progressBar" style="width: <?= $donation->getYearProgress() . '%' ?>"></div>
-                            </div>
-                            <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>
-                        </a>
-                    </li>
-                </ul>
                 <ul class="HeaderStat HeaderInfo-middle">
                     <li class="HeaderStat-item is-seeding" data-tooltip="<?= t('server.common.uploaded') ?>">
                         <a class="HeaderStat-link LinkHeader Link" href="torrents.php?type=seeding&amp;userid=<?= G::$LoggedUser['ID'] ?>">
@@ -466,20 +456,6 @@ if ($_REQUEST['action']) {
                         <a class="HeaderQuickAction-iconLink LinkHeader Link u-center u-heightFull" href="upload.php?action=image" data-tooltip="<?= t('server.common.image_host') ?>">
                             <?= icon('image-host') ?>
                         </a>
-                    </li>
-                    <li class="HeaderQuickAction-item is-language brackets Dropdown Dropdown-trigger" data-tooltip="<?= t('server.common.language') ?>">
-                        <a class="HeaderQuickAction-iconLink LinkHeader Link u-center u-heightFull">
-                            <?= icon('Common/language') ?>
-                        </a>
-                        <form action="/" method="post">
-                            <input type="hidden" name="action" value="change_language" />
-                            <input type="hidden" name="auth" value="<?= $LoggedUser['AuthKey'] ?>" />
-                            <div class="DropdownMenu Overlay">
-                                <? foreach (Lang::LANGS as $Lang) { ?>
-                                    <input class="DropdownMenu-item is-lang<?= $Lang ?>" type="submit" name="language" value="<?= t("server.common.lang_$Lang") ?>" />
-                                <? } ?>
-                            </div>
-                        </form>
                     </li>
                     <li class="HeaderQuickAction-item is-profile brackets Dropdown">
                         <div class="HeaderProfile">
