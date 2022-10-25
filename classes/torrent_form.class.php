@@ -721,10 +721,9 @@ class TORRENT_FORM {
                                     <?
                                     $resolution = $TorrentResolution;
                                     $resolution_width = '';
-                                    $resolution_height = '';
                                     if ($resolution && !in_array($resolution, $this->Resolutions)) {
                                         $resolution = "Other";
-                                        list($resolution_width, $resolution_height) = explode('&times;', $Torrent['Resolution']);
+                                        list($resolution_width) = explode('&times;', $Torrent['Resolution']);
                                     }
                                     foreach (Misc::display_array($this->Resolutions) as $Resolution) {
                                         echo "\t\t\t\t\t\t<option value=\"$Resolution\"";
@@ -737,7 +736,7 @@ class TORRENT_FORM {
                                     ?>
                                 </select>
                                 <span class="hidden">
-                                    <input class="Input is-small" type="text" id="resolution_width" name="resolution_width" value="<?= $resolution_width ?>">
+                                    <input class="Input is-small" type="text" id="resolution_width" name="resolution_width" value="<?= $resolution ?>">
                                 </span>
                             </div>
                         </div>
