@@ -557,8 +557,8 @@ class TorrentTableView {
         $SubName = Lang::is_default() ? $GroupInfo['Name'] : $GroupInfo['SubName'];
         $GroupYear = $GroupInfo['Year'];
     ?>
-        <span class="TableTorrent-movieInfoSubtitle">
-            <a href="\torrents.php?id=<?= $GroupID ?>"><?= display_str($GroupName) ?></a>
+        <span class="TableTorrent-movieInfoTitle">
+            <a href="\torrents.php?id=<?= $GroupID ?>"><?= display_str($SubName) ?></a>
             <span class="TableTorrent-movieInfoYear">(<? print_r($GroupYear) ?>)</span>
         </span>
         <? if (Bookmarks::has_bookmarked('torrent', $GroupID)) { ?>
@@ -591,8 +591,8 @@ class TorrentTableView {
         ?>
 
         <div class="TableTorrent-movieInfoSubtitle">
-            <? if ($SubName) {
-                echo display_str($SubName);
+            <? if ($GroupName) {
+                echo display_str($GroupName);
             } ?>
         </div>
     <?
