@@ -736,7 +736,7 @@ class TORRENT_FORM {
                                     ?>
                                 </select>
                                 <span class="hidden">
-                                    <input class="Input is-small" type="text" id="resolution_custom" name="resolution_custom" value="<?= $resolution ?>">
+                                    <input class="Input is-small" type="number" id="resolution_custom" name="resolution_custom" value="<?= $resolution ?>">
                                 </span>
                             </div>
                         </div>
