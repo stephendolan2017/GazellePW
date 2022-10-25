@@ -720,11 +720,10 @@ class TORRENT_FORM {
                                     <option class="Select-option" value=""><?= t('server.upload.auto_detect') ?></option>
                                     <?
                                     $resolution = $TorrentResolution;
-                                    $resolution_width = '';
-                                    $resolution_height = '';
+                                    $resolution_custom = '';
                                     if ($resolution && !in_array($resolution, $this->Resolutions)) {
                                         $resolution = "Other";
-                                        list($resolution_width, $resolution_height) = explode('&times;', $Torrent['Resolution']);
+                                        list($resolution_custom) = explode('&times;', $Torrent['Resolution']);
                                     }
                                     foreach (Misc::display_array($this->Resolutions) as $Resolution) {
                                         echo "\t\t\t\t\t\t<option value=\"$Resolution\"";
@@ -737,7 +736,7 @@ class TORRENT_FORM {
                                     ?>
                                 </select>
                                 <span class="hidden">
-                                    <input class="Input is-small" type="text" id="resolution" name="resolution" value="<?= $resolution ?>">
+                                    <input class="Input is-small" type="text" id="resolution_custom" name="resolution_custom" value="<?= $resolution ?>">
                                 </span>
                             </div>
                         </div>
