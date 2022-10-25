@@ -377,7 +377,7 @@ if ($_REQUEST['action']) {
                 <ul class="HeaderDonate HeaderInfo-left">
                     <li class="HeaderDonate-content HeaderInfo-item brackets <?= Format::add_class($PageID, array('donate'), 'active', false) ?>">
                         <a class="HeaderDonate-link LinkHeader Link" href="https://discord.gg/HvCAGwzkjV" target="_blank">
-                            <div class="">
+                            <div class="HeaderDonate-discord">
                                 <i class="fa-brands fa-discord"></i>
                             </div>
                             <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>

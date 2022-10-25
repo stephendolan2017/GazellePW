@@ -65,3 +65,7 @@ HeaderDonate
   font-style: italic;
   color: var(--global-color-success);
 }
+
+.HeaderDonate-discord {
+  padding-right: 5px;
+}
