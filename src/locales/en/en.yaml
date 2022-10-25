@@ -139,7 +139,7 @@ client.upload.releasetype_required: |-
 client.upload.remaster_required: |-
   Please clarify the specific content of the extras.
 client.upload.resolution_required: |-
-  Please select a resolution.
+  Please select or enter a resolution. If audio only, enter bitrate along with kbps. (eg. 320kbps)
 client.upload.source_required: |-
   Please select the source. If you are unsure then select Other and enter Unknown.
 client.upload.sub_name: |-
