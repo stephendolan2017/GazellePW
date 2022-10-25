@@ -734,25 +734,12 @@ class TORRENT_FORM {
                                         echo ">$Resolution</option>\n";
                                         // <option class="Select-option" value="$Resolution" selected="selected">$Resolution</option>
                                     }
-                                        if ($resolution && !in_array($resolution, $this->Resolutions)) {
-                                            $resolution = "Audio Only";
-                                            list($audio_bitrate) = explode('&times;', $Torrent['Resolution']);
-                                        }
-                                        foreach (Misc::display_array($this->Resolutions) as $Resolution) {
-                                            echo "\t\t\t\t\t\t<option value=\"$Resolution\"";
-                                            if ($Resolution == $resolution) {
-                                                echo ' selected="selected"';
-                                            }
-                                            echo ">$Resolution</option>\n";
-                                            // <option class="Select-option" value="$Resolution" selected="selected">$Resolution</option>
-                                        }
                                     ?>
                                 </select>
                                 <span class="hidden">
                                     <input class="Input is-small" type="number" id="resolution_width" name="resolution_width" value="<?= $resolution_width ?>">
                                     <span>×</span>
                                     <input class="Input is-small" type="number" id="resolution_height" name="resolution_height" , value="<?= $resolution_height ?>">
-                                    <input class="Input is-small" type="text" id="resolution_height" name="resolution_height" , value="<?= $audio_bitrate ?>">
                                 </span>
                             </div>
                         </div>
