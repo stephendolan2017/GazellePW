@@ -180,11 +180,11 @@ View::show_header($Title, 'browse,comments,torrent,bbcode,recommend,cover_art,su
         </div>
         <div class="MovieInfo-titleContainer">
             <span class="MovieInfo-title">
-                <?= display_str($GroupName) ?>
+                <?= display_str($SubName) ?>
             </span>
             <i class="MovieInfo-year">(<? print_r($GroupYear) ?>)</i>
-            <? if ($SubName) {
-                echo "<div class='MovieInfo-subTitle'>" . display_str($SubName) . "</div>";
+            <? if ($GroupName) {
+                echo "<div class='MovieInfo-subTitle'>" . display_str($GroupName) . "</div>";
             } ?>
         </div>
         <div class="MovieInfo-tagContainer">
