@@ -59,8 +59,8 @@ if ($Properties['Container'] == 'Other') {
     $Properties['Container'] = $_POST['container_other'];
 }
 $Properties['Resolution'] = $_POST['resolution'];
-if ($Properties['Resolution'] == 'Other' && $_POST['resolution_width'] && $_POST['resolution_height']) {
-    $Properties['Resolution'] = $_POST['resolution_width'] . '×' . $_POST['resolution_height'];
+    if ($Properties['Resolution'] == 'Other') {
+        $Properties['Resolution'] = $_POST['resolution_other'];
 }
 $Properties['Subtitles'] = implode(',', $_POST['subtitles']);
 $Properties['Makers'] = $_POST['makers'];
