@@ -373,6 +373,16 @@ if ($_REQUEST['action']) {
     <div class="LayoutPage <?= $PageClass ?>">
         <header class="LayoutPage-header Header <?= (!empty($Alerts) || !empty($ModBar)) ? 'is-hasAlerts' : '' ?>">
             <div class="HeaderInfo">
+                <ul class="HeaderDonate HeaderInfo-left">
+                    <li class="HeaderDonate-content HeaderInfo-item brackets <?= Format::add_class($PageID, array('donate'), 'active', false) ?>">
+                        <a class="HeaderDonate-link LinkHeader Link" href="donate.php" data-tooltip="<?= t('server.donate.progress', ['Values' => [$donation->getYearProgress()]]) ?>">
+                            <div class="HeaderDonate-progressBarBorder">
+                                <div class="HeaderDonate-progressBar" style="width: <?= $donation->getYearProgress() . '%' ?>"></div>
+                            </div>
+                            <div class="HeaderDonate-percent"><?= t('server.donate.donate') ?></div>
+                        </a>
+                    </li>
+                </ul>
                 <ul class="HeaderStat HeaderInfo-middle">
                     <li class="HeaderStat-item is-seeding" data-tooltip="<?= t('server.common.uploaded') ?>">
                         <a class="HeaderStat-link LinkHeader Link" href="torrents.php?type=seeding&amp;userid=<?= G::$LoggedUser['ID'] ?>">
