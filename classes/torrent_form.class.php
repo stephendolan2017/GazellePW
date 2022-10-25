@@ -461,13 +461,6 @@ class TORRENT_FORM {
                     <?
                     if ($this->NewTorrent) {
                     ?>
-                        <tr class="Form-row">
-                            <td class="Form-label"><?= t('server.upload.english_movie_synopsis') ?><span class="u-colorWarning">*</span>:</td>
-                            <td class="Form-items Form-errorContainer">
-                                <? new TEXTAREA_PREVIEW('maindesc', 'maindesc', display_str($Torrent['MainGroupDescription']), 60, 8, false, false, false, array($this->Disabled)); ?>
-                                <h7><?= t('server.upload.chinese_movie_synopsis_note') ?></h7>
-                            </td>
-                        </tr>
 
                     <? } ?>
                 <? } ?>
@@ -781,41 +774,6 @@ class TORRENT_FORM {
                             </div>
                         </div>
                         <span id="container_warning" class="u-colorWarning"></span>
-                    </td>
-                </tr>
-                <tr class="Form-row is-text">
-                    <td class="Form-label">
-                        <?= t('server.upload.movie_subtitles') ?><span class="u-colorWarning">*</span>:
-                    </td>
-                    <td class="Form-items">
-                        <div id="subtitles_container" class="Form-errorContainer">
-                            <div id="type_of_subtitles" class="RadioGroup">
-                                <div class="Radio">
-                                    <input class="Input" type="radio" id="mixed_subtitles" name="subtitle_type" data-value="mixed-sub" value="1" <?= $SubtitleType == 1 ? 'checked' : '' ?>>
-                                    <label class="Radio-label" for="mixed_subtitles"><?= t('server.upload.mixed_subtitles') ?></label>
-                                </div>
-                                <div class="Ratio">
-                                    <input class="Input" type="radio" id="hardcoded_subtitles" name="subtitle_type" value="2" data-value="hardcoded-sub" <?= $SubtitleType == 2 ? 'checked' : '' ?>>
-                                    <label class="Radio-label" for="hardcoded_subtitles"><?= t('server.upload.hardcode_sub') ?></label>
-                                </div>
-                                <div class="Radio">
-                                    <input class="Input" type="radio" id="no_subtitles" name="subtitle_type" value="3" data-value="no-sub" <?= $SubtitleType == 3 ? 'checked' : '' ?>>
-                                    <label class="Radio-label" for="no_subtitles"><?= t('server.upload.no_subtitles') ?></label>
-                                </div>
-                            </div>
-                            <div id="other_subtitles" class="<?= in_array($SubtitleType, [1, 2]) ? '' : 'hidden' ?>">
-                                <div class="FormUpload-flags">
-                                    <?
-                                    $this->genSubcheckboxes(Subtitle::allItem(Subtitle::MainItem),  $Subtitles);
-                                    ?>
-
-                                    <?
-                                    $this->genSubcheckboxes(Subtitle::allItem(Subtitle::ExtraItem),  $Subtitles);
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <p class="upload_form_note"><?= t('server.upload.movie_subtitles_note') ?></p> -->
                     </td>
                 </tr>
                 <?
