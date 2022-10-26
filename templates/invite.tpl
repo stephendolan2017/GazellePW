@@ -61,7 +61,7 @@ border-top-right-radius: 5px;
 text-align: center;
 padding: 20px 0;
 background-color: #1e2538;">
-<img src="{{SITE_URL}}/src/css/publicstyle/images/loginlogo.png" style="width: 50%;">
+<img src="{{SiteURL}}/src/css/publicstyle/images/loginlogo.png" style="width: 50%;">
 </div>
 <div id="invite_mail_body" style="padding: 15px;">The user {{UserName}} has invited you to join {{SiteName}} and has specified this address ({{CurEmail}}) as your email address. To confirm your invite, click on the following button:<br/>
 <p class="button_container" style="text-align: center;
