@@ -5906,7 +5906,7 @@ server.upload.movie_edition_information_examples: |-
 server.upload.movie_edition_information_label: |-
   Check this box if this torrent has extra edition information.
 server.upload.movie_feature: |-
-  Feature torrent
+  Recording type
 server.upload.movie_feature_note: |-
   <strong>Note: </strong>only non-Chinese movies can use these marks.
 server.upload.movie_fill: |-
