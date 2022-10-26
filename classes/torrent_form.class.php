@@ -357,12 +357,6 @@ class TORRENT_FORM {
                             <div class="Form-inputs">
                                 <input class="Input" type="text" id="subname" name="subname" size="45" value="<?= display_str($Torrent['SubName']) ?>" <?= $this->Disabled ?> />
                             </div>
-
-                            <tr class="Form-row">
-                                <td class="Form-label"></td>
-                                <a>test</a>
-                            </tr>
-
                         </td>
                     </tr>
                     <tr class="Form-row" id="year_tr">
