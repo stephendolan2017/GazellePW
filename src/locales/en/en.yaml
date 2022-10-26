@@ -6039,9 +6039,7 @@ server.upload.thai: |-
 server.upload.thank_you_fix_torrent: |-
   Thank you for fixing this torrent!
 server.upload.title_how_to_blockquote: |-
-  This is pretty simple so don't mess it up!<br><br>
-
-    We usually follow the following naming scheme:<br><br>
+  We usually follow the following naming scheme:<br><br>
     
   <strong><a style="color:#C0392B;">[Festival/Event]</a>, <a style="color:#8E44AD;">[Venue]</a>, <a style="color:#3498DB;">[Town/City]</a>, <a style="color:#27AE60;">[Country]</a></strong><br><br>
   
