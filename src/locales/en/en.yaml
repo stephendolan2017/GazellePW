@@ -5889,7 +5889,7 @@ server.upload.mediainfo_bdinfo_placeholder: |-
 server.upload.mixed_subtitles: |-
   Softcoded subtitles
 server.upload.movie_aliases: |-
-  Date
+  Date (yyyy-mm-dd)
 server.upload.movie_aliases_note: |-
   Please enter the Date.
 server.upload.movie_codec: |-
@@ -6055,7 +6055,7 @@ server.upload.title_how_to_blockquote: |-
   
   Visit <a href='https://setlist.fm' target='_blank'>setlist.fm</a> if you are unsure of any venue information. Do your research and make sure this is all correct!
 server.upload.title_how_to_toggle: |-
-  &nbsp;How to fill a movie title&nbsp;
+  &nbsp;How to fill a media title&nbsp;
 server.upload.title_length_limit: |-
   Title must be between 2 and 200 characters.
 server.upload.torrent_diff: |-
@@ -6097,7 +6097,7 @@ server.upload.writer: |-
 server.upload.year: |-
   Year
 server.upload.year_remaster: |-
-  Initial year
+  Year (yyyy)
 server.upload.year_remaster_title: |-
   You have entered a year for a release which predates the medium's availability. You will need to change the year and enter additional edition information. If this information cannot be provided, check the &quot;Unknown Release&quot; check box below.
 server.user.1_week: |-
