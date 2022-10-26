@@ -140,7 +140,7 @@ foreach ($Emails as $CurEmail) {
     $Tpl->set('TGDisableChannel', $TGDisableChannel);
     $Tpl->set('TGDisableChannelName', $TGDisableChannelName);
 
-    Misc::send_email($CurEmail, '你有一封来自 ' . CONFIG['SITE_NAME'] . ' 的邀请函 | You have been invited to ' . CONFIG['SITE_NAME'], $Tpl->get(), 'noreply', 'text/html');
+    Misc::send_email($CurEmail, 'You have been invited to ' . CONFIG['SITE_NAME'], $Tpl->get(), 'noreply', 'text/html');
 }
 
 header('Location: user.php?action=invite');

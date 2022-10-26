@@ -61,36 +61,9 @@ border-top-right-radius: 5px;
 text-align: center;
 padding: 20px 0;
 background-color: #1e2538;">
-<img src="{{SiteURL}}/static/styles/public/images/loginlogo.png" style="width: 50%;">
+<img src="{{SITE_URL}}/src/css/publicstyle/images/loginlogo.png" style="width: 50%;">
 </div>
-<div id="invite_mail_body" style="padding: 15px;">用户 {{UserName}} 邀请你加入 {{SiteName}} 且指定了你的邮箱地址 {{CurEmail}}。欲确认邀请，请单击下方的按钮：<br/>
-<p class="button_container" style="text-align: center;
-margin: 10px 0;"><a class="button" target="_blank" href='{{SiteURL}}/register.php?invite={{InviteKey}}' style="cursor: pointer;
-outline: 0;
-transition: all .1s linear;
-background: #4285f4;
-border: none;
-border-radius: 5px;
-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2);
-color: #ffffff;
-padding: 5px 10px;
-margin: 0px 2px;
-text-decoration: none !important;
-font-size: 1.1rem;">注册</a></p>
-注意事项：
-<ol style="padding-top: 0;
-margin-top: 0;
-margin-left: 10px;
-padding-left: 10px">
-<li>此邮件的有效期为 72 小时</li>
-<li class="important" style="color: #d8210d">一人一生一号。如果你已有账号且无法登录，请加入 <a href="{{TGDisableChannel}}" target="_blank">账号问题咨询群</a>（需挂梯）</li>
-<li class="important" style="color: #d8210d">通过交易获取邀请注册的用户会被封禁</li>
-<li class="important" style="color: #d8210d">请使用家庭、本地网络注册，使用代理注册的用户会被封禁</li>
-<li>如果你对本邮件的内容感到莫名其妙，请无视</li>
-</ol>
-<hr/>
-<br/>
-The user {{UserName}} has invited you to join {{SiteName}} and has specified this address ({{CurEmail}}) as your email address. To confirm your invite, click on the following button:<br/>
+<div id="invite_mail_body" style="padding: 15px;">The user {{UserName}} has invited you to join {{SiteName}} and has specified this address ({{CurEmail}}) as your email address. To confirm your invite, click on the following button:<br/>
 <p class="button_container" style="text-align: center;
 margin: 10px 0;"><a class="button" target="_blank" href='{{SiteURL}}/register.php?invite={{InviteKey}}' style="cursor: pointer;
 outline: 0;
