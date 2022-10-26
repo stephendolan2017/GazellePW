@@ -360,11 +360,7 @@ class TORRENT_FORM {
 
                             <tr class="Form-row">
                                 <td class="Form-label"></td>
-                                <td class="Form-items">
-                                    <div class="FormUpload-explain">
-                                        <?= t('server.upload.title_how_to_blockquote') ?>
-                                    </div>
-                                </td>
+                                <a>test</a>
                             </tr>
 
                         </td>
