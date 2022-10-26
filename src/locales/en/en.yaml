@@ -1152,7 +1152,7 @@ server.common.movie_collection: |-
 server.common.movie_name: |-
   Movie title
 server.common.movie_name_title: |-
-  Movie title or IMDb ID
+  Media title
 server.common.my_badges: |-
   Badges
 server.common.my_bookmarks: |-

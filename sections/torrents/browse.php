@@ -228,39 +228,7 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                         </select>
                     </td>
                 </tr>
-                <tr class="Form-row is-subtitle is-advanced <?= $HideAdvanced ?>">
-                    <td class="Form-label"><?= t('server.common.subtitle') ?>:</td>
-                    <td class="Form-inputs">
-                        <select class="Input" id="subtitle_infos" onchange="globalapp.addTorrentItem('subtitles', 'subtitle_infos'); return false;">
-                            <option class="Select-option" value="">--</option>
-                            <? foreach (Subtitle::allItem() as $Key) { ?>
-                                <option class="Select-option" value="<?= $Key ?>"><?= Subtitle::text($Key)  ?></option>
-                            <? } ?>
-                        </select>
-                        <input class="Input" type="text" spellcheck="false" size="40" id="subtitles" name="subtitles" placeholder="<?= t('server.common.comma_separated') ?>" value="<? Format::form('subtitles') ?>" />
-                    </td>
-                </tr>
-                <tr class="Form-row is-region is-advanced <?= $HideAdvanced ?>">
-                    <td class="Form-label"><?= t('server.common.countries_and_regions') ?>:</td>
-                    <td class="Form-inputs">
-                        <select class="Input" id="region_infos" onchange="globalapp.addTorrentItem('region', 'region_infos'); return false;">
-                            <option class="Select-option" value="">--</option>
-                            <? foreach (Region::allItem() as $Key) { ?>
-                                <option class="Select-option" value="<?= $Key ?>"><?= Region::text($Key)  ?></option>
-                            <? } ?>
-                        </select>
-                        <input class="Input" type="text" spellcheck="false" size="40" id="region" name="region" placeholder="<?= t('server.common.comma_separated') ?>" value="<? Format::form('region') ?>" />
-                    </td>
-                </tr>
-                <tr class="Form-row is-rating is-advanced <?= $HideAdvanced ?>">
-                    <td class="Form-label"><?= t('server.common.rating') ?>:</td>
-                    <td class="Form-inputs is-splitEven" colspan="3">
-                        <input class="Input" type="text" spellcheck="false" size="40" name="imdbrating" placeholder="<?= t('server.common.imdb_rating') ?>" value="<? Format::form('imdbrating') ?>" />
-                        <input class="Input" type="text" spellcheck="false" size="40" name="doubanrating" placeholder="<?= t('server.common.douban_rating') ?>" value="<? Format::form('doubanrating') ?>" />
-                        <input class="Input" type="text" spellcheck="false" size="40" name="rtrating" placeholder="<?= t('server.common.rt_rating') ?>" value="<? Format::form('rtrating') ?>" />
-                    </td>
-                </tr>
-                <tr class="Form-row is-editionInfo is-advanced <?= $HideAdvanced ?>">
+                    <tr class="Form-row is-editionInfo is-advanced <?= $HideAdvanced ?>">
                     <td class="Form-label"><?= t('server.common.edition_info') ?>:</td>
                     <td class="Form-inputs" colspan="3">
                         <select class="Input" id="edition_infos" onchange="globalapp.addTorrentItem('remtitle', 'edition_infos'); return false;">
@@ -372,28 +340,6 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                     <td class="Form-label"><?= t('server.torrents.ftb_searchstr') ?>:</td>
                     <td class="Form-inputs ftb_searchstr">
                         <input class="Input" type="text" spellcheck="false" size="40" name="searchstr" value="<? Format::form('searchstr') ?>" />
-                    </td>
-                </tr>
-                <tr class="Form-row is-tagFilter is-advanced <?= $HideAdvanced ?>">
-                    <td class="Form-label"><span data-tooltip="<?= t('server.common.tags') ?>"><?= t('server.common.tags') ?>:</span></td>
-                    <td class="Form-inputs">
-                        <select class="Input" id="genre_tags" name="genre_tags" onchange="globalapp.addTorrentItem('tags', 'genre_tags'); return false;">
-                            <option class="Select-option" value="">--</option>
-                            <? foreach (Misc::display_array($GenreTags) as $Genre) { ?>
-                                <option class="Select-option" value="<?= $Genre ?>"><?= $Genre ?></option>
-                            <? } ?>
-                        </select>
-                        <input class="Input" type="text" placeholder="<?= t('server.common.comma_separated') ?>" size="40" id="tags" name="taglist" value="<?= Format::form('taglist') ?>" />
-                        <div class="RadioGroup">
-                            <div class="Radio">
-                                <input class="Input" type="radio" name="tags_type" id="tags_type0" value="0" <? Format::selected('tags_type', 0, 'checked') ?> />
-                                <label class="Radio-label" for="tags_type0"> <?= t('server.torrents.any') ?></label>
-                            </div>
-                            <div class="Radio">
-                                <input class="Input" type="radio" name="tags_type" id="tags_type1" value="1" <? Format::selected('tags_type', 1, 'checked') ?> />
-                                <label class="Radio-label" for="tags_type1"> <?= t('server.torrents.all') ?></label>
-                            </div>
-                        </div>
                     </td>
                 </tr>
                 <tr class="Form-row is-order">
