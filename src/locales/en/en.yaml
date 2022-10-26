@@ -2156,7 +2156,7 @@ server.permissions.torrents_search_fast: |-
 server.permissions.torrents_slot_edit: |-
   Can manage which slot should a torrent stay in
 server.permissions.torrents_trumpable: |-
-  Can manage trumpable marks of torrents
+  Can manage warning marks of torrents
 server.permissions.users: |-
   Users
 server.permissions.users_delete_users: |-
@@ -2614,7 +2614,7 @@ server.reportsv2.current_count: |-
 server.reportsv2.currently_assigned_reports_by_staff_member: |-
   Currently assigned reports by staff member
 server.reportsv2.custom_trumpable: |-
-  Custom trumpable
+  Custom warning
 server.reportsv2.date_reported: |-
   Date reported
 server.reportsv2.delete_title: |-
@@ -5515,7 +5515,7 @@ server.torrents.slot_status_full: |-
 server.torrents.slot_status_occupied: |-
   Occupied
 server.torrents.slot_status_trumpable: |-
-  Trumpable
+  Warning
 server.torrents.slot_table: |-
   Slots
 server.torrents.slot_wiki: |-
@@ -5605,9 +5605,9 @@ server.torrents.torrents_count: |-
 server.torrents.total_reward_bonus_points_pre_tax: |-
   Total reward bonus points (pre-tax)
 server.torrents.trump: |-
-  Trumpable
+  Warning
 server.torrents.trumpable_reason: |-
-  Trumpable reason
+  Warning reason
 server.torrents.trumped: |-
   Trumped
 server.torrents.turn_me_green: |-
@@ -5791,7 +5791,7 @@ server.upload.copy: |-
 server.upload.croatian: |-
   Croatian
 server.upload.custom_trumpable: |-
-  Custom Trumpable
+  Custom Warning
 server.upload.czech: |-
   Czech
 server.upload.danish: |-
@@ -5944,7 +5944,7 @@ server.upload.movie_torrent_note: |-
 server.upload.movie_torrent_description_note: |-
   We require at least three PNG screenshots (<a href="wiki.php?action=article&name=原始分辨率截图指南" target="_blank">guide</a>), and a full MediaInfo (<a href="wiki.php?action=article&name=MediaInfo+使用指南" target="_blank">guide</a>) or BDInfo (<a href="wiki.php?action=article&name=BDInfo+使用指南" target="_blank">guide</a>) log.<br/>Please consult our rules page for more information on required information.
 server.upload.movie_trumpable: |-
-  Trumpable
+  Warning
 server.upload.movie_type: |-
   Media type
 server.upload.movie_upload_note: |-
