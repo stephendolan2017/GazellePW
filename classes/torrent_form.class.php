@@ -470,22 +470,6 @@ class TORRENT_FORM {
                         </td>
                     </tr>
                 <? } ?>
-                <tr class="Form-row is-section is-text">
-                    <td class="Form-label">
-                        <?= t('server.upload.movie_scene') ?>:
-                    </td>
-                    <td class="Form-items">
-                        <div class="Form-inputs">
-                            <div class="Checkbox">
-                                <input class="Input" type="checkbox" id="scene" name="scene" <?= empty($Scene) ?: 'checked="checked"' ?> />
-                                <label class="Checkbox-label" for="scene"><?= t('server.upload.movie_scene_label') ?></label>
-                            </div>
-                        </div>
-                        <p class="upload_form_note">
-                            <?= t('server.upload.movie_scene_note') ?>
-                        </p>
-                    </td>
-                </tr>
                 <tr class="Form-row is-text">
                     <td class="Form-label">
                         <?= t('server.upload.not_main_movie') ?>:
@@ -878,14 +862,6 @@ class TORRENT_FORM {
                                                                                                                                                     echo 'checked="checked" ';
                                                                                                                                                 } ?> />
                                     <label class="Checkbox-label" for="self_rip"><?= t('server.upload.self_rip') ?></label>
-                                </div>
-                                <div class="Checkbox">
-                                    <input class="Input" type="checkbox" id="jinzhuan" name="jinzhuan" <? if ($Jinzhuan) {
-                                                                                                            echo 'checked="checked" ';
-                                                                                                        } ?><?= !$Buy && !$Diy && !check_perms("users_mod") ? "disabled" : "" ?> />
-                                    <label class="Checkbox-label" for="jinzhuan"><?= t('server.upload.jinzhuan') ?></label>
-                                </div>
-                            </div>
                             <div style="padding: 10px 0 0;"><?= t('server.upload.marks_warning') ?></div>
                             <div>
                                 <strong class="how_to_toggle_container">[<a href="javascript:void(0);" onclick="$('#marks_how_to_blockquote').new_toggle();"><strong class="how_to_toggle"><?= t('server.upload.marks_how_to_toggle') ?></strong></a>]</strong>
