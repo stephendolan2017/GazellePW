@@ -6040,9 +6040,10 @@ server.upload.thank_you_fix_torrent: |-
   Thank you for fixing this torrent!
 server.upload.title_how_to_blockquote: |-
   This is pretty simple so don't mess it up!<br><br>
-    We usually follow <a href='https://setlist.fm' target='_blank'>setlist.fm's</a> method of naming which consists of:<br><br>
+
+    We usually follow the following naming scheme:<br><br>
     
-  <a style="color:#C0392B;">[Festival/Event]</a>, <a style="color:#8E44AD;">[Venue]</a>, <a style="color:#3498DB;">[Town/City]</a>, <a style="color:#27AE60;">[Country]</a><br><br>
+  <strong><a style="color:#C0392B;">[Festival/Event]</a>, <a style="color:#8E44AD;">[Venue]</a>, <a style="color:#3498DB;">[Town/City]</a>, <a style="color:#27AE60;">[Country]</a></strong><br><br>
   
   eg. <i><a style="color:#C0392B;">Glastonbury Festival</a>, <a style="color:#8E44AD;">Worthy Farm</a>, <a style="color:#3498DB;">Pilton</a>, <a style="color:#27AE60;">England</a></i><br>
   
@@ -6052,7 +6053,9 @@ server.upload.title_how_to_blockquote: |-
   
   Normal tour dates or non festival/event dates can be titled without the <a style="color:#C0392B;">[Festival/Event]</a> tag.<br>
   
-  eg. <i><a style="color:#8E44AD;">Stade de France</a>, <a style="color:#3498DB;">Saint-Denis</a>, <a style="color:#27AE60;">France</a></i>
+  eg. <i><a style="color:#8E44AD;">Stade de France</a>, <a style="color:#3498DB;">Saint-Denis</a>, <a style="color:#27AE60;">France</a></i><br><br>
+  
+  Visit <a href='https://setlist.fm' target='_blank'>setlist.fm</a> if you are unsure of any venue information. Do your research and make sure this is all correct!
 server.upload.title_how_to_toggle: |-
   &nbsp;How to fill a movie title&nbsp;
 server.upload.title_length_limit: |-
