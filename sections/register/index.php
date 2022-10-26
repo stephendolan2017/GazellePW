@@ -12,6 +12,12 @@ if (isset($LoggedUser)) {
 include(CONFIG['SERVER_ROOT'] . '/classes/validate.class.php');
 $Val = new VALIDATE;
 
+    if (!CONFIG['OPEN_REGISTRATION']) {
+        
+        include('closed.php');
+        die();
+    }
+
 if (!empty($_REQUEST['confirm'])) {
     // Confirm registration
     $DB->query("
