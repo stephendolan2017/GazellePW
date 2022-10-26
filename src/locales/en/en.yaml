@@ -6039,15 +6039,20 @@ server.upload.thai: |-
 server.upload.thank_you_fix_torrent: |-
   Thank you for fixing this torrent!
 server.upload.title_how_to_blockquote: |-
-  Please read upload rule <a href='rules.php?p=upload#2.1' target='_blank'>2.1</a> for title naming. Here are some extra explanation.<br/><br/>
-  <strong>Movie title</strong>: The English main title of the movie. Please notice that the title that auto filled may not be a normal one, which is a transliteration of the original language title. At this time, we strongly recommend you to use Standard English title, which can be found on:
-  <ul>
-      <li>Film poster;</li>
-      <li>MDb's "Also known as" Illustration;</li>
-      <li>If the torrent is an Encode, the file name may be a standard English title.</li>
-  </ul>When you can't find a Standard English title by the ways above, then a transliteration is acceptable. For example, Chinese movie <i>The Wandering Earth</i> should not be named as <i>Liu Lang Di Qiu</i>.
-  <br/><br/>
-  <strong>Chinese title:</strong> Please enter the mainland China title. Titles used in Hong Kong or Taiwan province are not allowed.
+  This is pretty simple so don't mess it up!<br><br>
+    We usually follow <a href='https://setlist.fm' target='_blank'>setlist.fm's</a> method of naming which consists of:<br><br>
+    
+  <a style="color:#C0392B;">[Festival/Event]</a>, <a style="color:#8E44AD;">[Venue]</a>, <a style="color:#3498DB;">[Town/City]</a>, <a style="color:#27AE60;">[Country]</a><br><br>
+  
+  eg. <i><a style="color:#C0392B;">Glastonbury Festival</a>, <a style="color:#8E44AD;">Worthy Farm</a>, <a style="color:#3498DB;">Pilton</a>, <a style="color:#27AE60;">England</a></i><br>
+  
+  or</br>
+  
+  eg. <i><a style="color:#C0392B;">X Factor Final</a>, <a style="color:#8E44AD;">Mediolanum Forum di Assago</a>, <a style="color:#3498DB;">Assago</a>, <a style="color:#27AE60;">Italy</a></i><br><br>
+  
+  Normal tour dates or non festival/event dates can be titled without the <a style="color:#C0392B;">[Festival/Event]</a> tag.<br>
+  
+  eg. <i><a style="color:#8E44AD;">Stade de France</a>, <a style="color:#3498DB;">Saint-Denis</a>, <a style="color:#27AE60;">France</a></i>
 server.upload.title_how_to_toggle: |-
   &nbsp;How to fill a movie title&nbsp;
 server.upload.title_length_limit: |-
