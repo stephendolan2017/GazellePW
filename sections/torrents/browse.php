@@ -210,6 +210,7 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                         
                         <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
                         <select class="Input" id="artist" name="artistname">
+                            <option class="Select-option" value="">Era</option>
                             <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
                             <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
                             <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
