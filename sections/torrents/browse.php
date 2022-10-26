@@ -211,14 +211,8 @@ View::show_header(t('server.torrents.header'), 'browse', 'PageTorrentHome');
                     </td>
                 </tr>
                 <tr class="Form-row is-language is-advanced <?= $HideAdvanced ?>">
-                    <td class="Form-label"><?= t('server.common.language') ?>:</td>
+                    <td class="Form-label"><?= t('server.torrents.director') ?>:</td>
                     <td class="Form-inputs">
-                        <select class="Input" id="language_infos" onchange="globalapp.addTorrentItem('language', 'language_infos'); return false;">
-                            <option class="Select-option" value="">--</option>
-                            <? foreach (Language::allItem() as $Key) { ?>
-                                <option class="Select-option" value="<?= $Key ?>"><?= Language::text($Key)  ?></option>
-                            <? } ?>
-                        </select>
                         <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
                         <select class="Input" id="artist" name="artistname">
                             <option class="Select-option" value="">--</option>
