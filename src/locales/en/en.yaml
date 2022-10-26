@@ -5469,7 +5469,7 @@ server.torrents.sd_untouched: |-
 server.torrents.sd_untouched_title: |-
   Untouched
 server.torrents.se_sub: |-
-  SE Sub
+  IEM
 server.torrents.search: |-
   Search
 server.torrents.search_empty_1: |-
@@ -6023,7 +6023,7 @@ server.upload.slovenian: |-
 server.upload.spanish: |-
   Spanish
 server.upload.special_effects_subtitles_label: |-
-  Special effects subtitles
+  IEM recording
 server.upload.staff_note: |-
   Staff note
 server.upload.sub_name: |-
