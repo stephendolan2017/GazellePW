@@ -330,8 +330,3 @@ if (!empty($_REQUEST['confirm'])) {
         include('closed.php');
     }
 }
-    if (!CONFIG['OPEN_EXTERNAL_REFERRALS']) {
-        
-        include('closed.php');
-        die();
-    }
