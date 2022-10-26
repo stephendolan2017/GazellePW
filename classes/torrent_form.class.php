@@ -343,6 +343,14 @@ class TORRENT_FORM {
                             </div>
                         </td>
                     </tr>
+                <tr class="Form-row">
+                    <td class="Form-label"></td>
+                    <td class="Form-items" id="title_how_to_blockquote" style="display: none">
+                        <div class="FormUpload-explain">
+                            <?= t('server.upload.title_how_to_blockquote') ?>
+                        </div>
+                    </td>
+                </tr>
                     <tr class="Form-row" id="aliases_tr">
                         <td class="Form-label"><?= t('server.upload.movie_aliases') ?>:</td>
                         <td class="Form-items">
@@ -350,14 +358,6 @@ class TORRENT_FORM {
                                 <input class="Input" type="text" id="subname" name="subname" size="45" value="<?= display_str($Torrent['SubName']) ?>" <?= $this->Disabled ?> />
                             </div>
 
-                        </td>
-                    </tr>
-                    <tr class="Form-row">
-                        <td class="Form-label"></td>
-                        <td class="Form-items" id="title_how_to_blockquote" style="display: none">
-                            <div class="FormUpload-explain">
-                                <?= t('server.upload.title_how_to_blockquote') ?>
-                            </div>
                         </td>
                     </tr>
                     <tr class="Form-row" id="year_tr">
