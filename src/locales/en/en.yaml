@@ -5067,7 +5067,7 @@ server.torrents.cleardefault: |-
 server.torrents.client: |-
   Client
 server.torrents.cn_dub: |-
-  CN Dub
+  Audience Recording
 server.torrents.cn_quality_slot: |-
   CN Quality Slot
 server.torrents.cn_quality_slot_requirements: |-
