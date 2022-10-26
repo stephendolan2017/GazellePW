@@ -863,7 +863,6 @@ class TORRENT_FORM {
                                                                                                                                                 } ?> />
                                     <label class="Checkbox-label" for="self_rip"><?= t('server.upload.self_rip') ?></label>
                                 </div>
-                                    <label class="Checkbox-label" for="jinzhuan"><?= t('server.upload.jinzhuan') ?></label>
                                 </div>
                             </div>
                             <div style="padding: 10px 0 0;"><?= t('server.upload.marks_warning') ?></div>
