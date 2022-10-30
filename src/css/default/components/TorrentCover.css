@@ -51,7 +51,6 @@ TorrentCover variant="OneLine | FiveGrid"
 .TorrentCover-imageContainer {
   width: 160px;
   height: 160px;
-  object-fit: cover;
 }
 @media (max-width: 768px) {
   .TorrentCover[variant='OneLine'] .TorrentCover-imageContainer {
@@ -63,6 +62,7 @@ TorrentCover variant="OneLine | FiveGrid"
 .TorrentCover-image {
   height: 100%;
   border-radius: var(--global-borderRadius);
+  object-fit: cover;
 }
 
 .TorrentCover-item b {
