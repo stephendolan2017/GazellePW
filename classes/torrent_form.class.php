@@ -426,8 +426,8 @@ class TORRENT_FORM {
                         ?>
                         <div class="Form-inputs">
                             <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
-                            <select class="Input" id="artist" name="artists[]">
-                                <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
+                            <select class="Input" id="artist_id" name="artist_ids[]">
+                                <option class="Select-option" value="8">Music of The Spheres Era</option>
                                 <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
                                 <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
                                 <option class="Select-option" value="Ghost Stories Era">Ghost Stories Era</option>
