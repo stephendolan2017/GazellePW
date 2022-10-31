@@ -156,10 +156,6 @@ if ($IsNewGroup) {
     }
 }
 
-if ($Properties['ReleaseType'] == 3 || $Properties['ReleaseType'] == 4) {
-    $Err = t('server.upload.select_valid_format');
-}
-
 if ($Err) { // Show the upload form, with the data the user entered
     $UploadForm = $Type;
     include(CONFIG['SERVER_ROOT'] . '/sections/upload/upload.php');
