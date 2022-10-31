@@ -426,17 +426,7 @@ class TORRENT_FORM {
                         ?>
                         <div class="Form-inputs">
                             <input type="hidden" id="artist_id" name="artist_ids[]" size="45" />
-                            <select class="Input" id="artist" name="artists[]">
-                                <option class="Select-option" value="Music of The Spheres Era">Music of The Spheres Era</option>
-                                <option class="Select-option" value="Everyday Life Era">Everyday Life Era</option>
-                                <option class="Select-option" value="A Head Full of Dreams Era">A Head Full of Dreams Era</option>
-                                <option class="Select-option" value="Ghost Stories Era">Ghost Stories Era</option>
-                                <option class="Select-option" value="Mylo Xyloto Era">Mylo Xyloto Era</option>
-                                <option class="Select-option" value="Viva La Vida Era">Viva La Vida Era</option>
-                                <option class="Select-option" value="X&Y Era">X&Y Era</option>
-                                <option class="Select-option" value="A Rush of Blood To The Head Era">A Rush of Blood To The Head Era</option>
-                                <option class="Select-option" value="Parachutes Era">Parachutes Era</option>
-                            </select>
+                                <input class="Input is-small" type="text" id="artist" name="artists[]" size="45" value="<?= display_str($Artist['Name']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
                             <style>.in{visibility:hidden;}</style>
                             <select class="in" id="importance" name="importance[]" <?= $this->Disabled ?>>
                                 <option class="Select-option" selected="selected" value="1"><?= Lang::get('upload', 'director') ?></option>
