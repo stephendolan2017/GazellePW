@@ -429,7 +429,8 @@ class TORRENT_FORM {
                                 <input class="Input is-small" type="text" id="artist" name="artists[]" size="45" value="<?= display_str($Artist['Name']) ?>" <? Users::has_autocomplete_enabled('other'); ?><?= $this->Disabled ?> />
                             <style>.in{visibility:hidden;}</style>
                             <select class="in" id="importance" name="importance[]" <?= $this->Disabled ?>>
-                                <option class="Select-option" selected="selected" value="1"><?= Lang::get('upload', 'director') ?></option>
+                                <option class="Select-option" value="1" <?= ($Importance == '1' ? ' selected="selected"' : ($this->DisabledFlag ? 'disabled' : '')) ?>>
+                                    <?= t('server.upload.director') ?></option>
                             </select>
                         </div>
                         <? } ?>
