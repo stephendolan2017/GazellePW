@@ -5376,12 +5376,14 @@ server.torrents.release_types:
   '3': |-
     Music Video
   '4': |-
-    Instrumental
+    Album
   '5': |-
-    Stem/Multitrack
+    Instrumental
   '6': |-
-    Unreleased/B-Side
+    Stem/Multitrack
   '7': |-
+    Unreleased/B-Side
+  '8': |-
     Documentary
 
 server.torrents.remove: |-
