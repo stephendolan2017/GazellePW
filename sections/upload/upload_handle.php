@@ -130,38 +130,6 @@ $IsNewGroup = empty($GroupID);
 
 
 $Validate = new VALIDATE;
-$Validate->SetFields(
-    'codec',
-    '1',
-    'string',
-    t('server.upload.select_valid_format')
-);
-$Validate->SetFields(
-    'resolution',
-    '1',
-    'string',
-    t('server.upload.select_valid_format')
-);
-$Validate->SetFields(
-    'container',
-    '1',
-    'string',
-    t('server.upload.select_valid_format')
-);
-$Validate->SetFields(
-    'source',
-    '1',
-    'string',
-    t('server.upload.select_valid_format')
-);
-if ($IsNewGroup) {
-    $Validate->SetFields(
-        'name',
-        '1',
-        'string',
-        t('server.upload.title_length_limit')
-    );
-}
 
 $Err = $Validate->ValidateForm($_POST); // Validate the form
 
