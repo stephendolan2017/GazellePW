@@ -5972,12 +5972,12 @@ server.upload.no_torrent_uploaded: |-
 server.upload.norwegian: |-
   Norwegian
 server.upload.not_main_movie: |-
-  Not main movie
+  Not main video
 server.upload.not_main_movie_label: |-
-  Check this only if it does NOT contain the main movie.
+  Check this only if the main part of this torrent is NOT video.
 server.upload.not_main_movie_note: |-
   Examples: |-
-  ONLY contains extras, Rifftrax, Workprints.
+  Audio only (live audio, album, instrumental etc.), press release or photos
 server.upload.not_supported_encrypted_file_list: |-
   This torrent contains an encrypted file list which is not supported here.
 server.upload.not_torrent_file: |-
