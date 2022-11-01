@@ -5875,8 +5875,7 @@ server.upload.marks_how_to_blockquote: |-
   <li>Marks explanation:
     <ol class='postlist'>
       <li>Self-purchase: For physical discs etc. that were purchased by the uploader.</li>
-      <li>Self-rip: For Encodes, Remuxes, DIYs, etc. that were ripped by the uploader.</li>
-      <li>Exclusive: You need uploader’s permission to re-post the torrent.</li>
+      <li>Self-rip: Files that were ripped by the uploader.</li>
     </ol>
   </li>
   <li>Only one of Self-purchase or Self-rip can be selected.</li></ul>
@@ -5904,7 +5903,7 @@ server.upload.movie_edition_information: |-
   Edition information
 server.upload.movie_edition_information_examples: |-
   Examples: |-
-  Part of a collection, special edition, dolby vision/atomos or non-standard rip feature. See the edition guide <a href="#">here</a>. <strong>When choosing "Masters of Cinema" "The Criterion Collection" "Warner Archive Collection" "4K Restoration" "4K Remaster" "Remastered" or entering a custom information, you're strongly recommended to fill the specific year.</strong>
+  Dolby Atmos, 5.1 Surround, 10-bit, Dolby Vision, HDR10, 
 server.upload.movie_edition_information_label: |-
   Check this box if this torrent has extra edition information.
 server.upload.movie_feature: |-
@@ -6065,6 +6064,8 @@ server.upload.torrent_diff: |-
 server.upload.torrent_file: |-
   Torrent file
 server.upload.torrent_info_how_to_blockquote: |-
+PLACEHOLDER, DISREGARD BELOW  
+  
   <strong>MediaInfo and specifications:</strong> After pasting the MediaInfo (<a href="wiki.php?action=article&name=MediaInfo+使用指南" target="_blank">guide</a>) or the BDInfo (<a href="wiki.php?action=article&name=BDInfo+使用指南" target="_blank">guide</a>) log, you may click outside the textarea, then the four selectors with "Auto-detect" will automatically be chose.<br/>
   <strong class="u-colorWarning">Please double check after filling automatically.</strong><br/><br/>
   <strong>Torrent description:</strong> We require at least three PNG screenshots (<a href="wiki.php?action=article&name=原始分辨率截图指南" target="_blank">guide</a>).<br/>
