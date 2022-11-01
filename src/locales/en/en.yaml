@@ -6064,7 +6064,7 @@ server.upload.torrent_diff: |-
 server.upload.torrent_file: |-
   Torrent file
 server.upload.torrent_info_how_to_blockquote: |-
-PLACEHOLDER, DISREGARD BELOW  
+  PLACEHOLDER, DISREGARD BELOW  
   
   <strong>MediaInfo and specifications:</strong> After pasting the MediaInfo (<a href="wiki.php?action=article&name=MediaInfo+使用指南" target="_blank">guide</a>) or the BDInfo (<a href="wiki.php?action=article&name=BDInfo+使用指南" target="_blank">guide</a>) log, you may click outside the textarea, then the four selectors with "Auto-detect" will automatically be chose.<br/>
   <strong class="u-colorWarning">Please double check after filling automatically.</strong><br/><br/>
