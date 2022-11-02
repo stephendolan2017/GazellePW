@@ -18,7 +18,7 @@ HeaderSearch
 }
 
 .HeaderSearchList {
-  display: grid;
+  display: flex;
   margin: 0 auto;
   max-width: 735px;
   grid-template-columns: repeat(6, 1fr);

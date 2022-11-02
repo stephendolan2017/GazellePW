@@ -546,18 +546,17 @@ if ($_REQUEST['action']) {
                                                                                                                 ?> accesskey="t" spellcheck="false" placeholder="<?= t('server.index.moviegroups') ?>" name="<?= $UseAdvancedSearch ? 'groupname' : 'searchstr' ?>" size="17" />
                         </form>
                     </li>
-                    
+                    <li class="HeaderSearchList-item" id="searchbar_artists">
+                        <span class="hidden">Artist: </span>
+                        <form class="HeaderSearch-form" name="artists" action="artist.php" method="get">
+                            <input class="Input InputHeader" id="artistsearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
+                                                                                                    ?> accesskey="a" spellcheck="false" placeholder="<?= t('server.common.artists') ?>" type="text" name="artistname" size="17" />
+                        </form>
+                    </li>
                     <li class="HeaderSearchList-item" id="searchbar_requests">
                         <span class="hidden">Requests: </span>
                         <form class="HeaderSearch-form" name="requests" action="requests.php" method="get">
                             <input class="Input InputHeader" type="text" id="requestssearch" spellcheck="false" accesskey="r" placeholder="<?= t('server.common.requests') ?>" name="search" size="17" />
-                        </form>
-                    </li>
-                    <li class="HeaderSearchList-item" id="searchbar_forums">
-                        <span class="hidden">Forums: </span>
-                        <form class="HeaderSearch-form" name="forums" action="forums.php" method="get">
-                            <input value="search" type="hidden" name="action" />
-                            <input class="Input InputHeader" type="text" id="forumssearch" accesskey="f" placeholder="<?= t('server.common.forums') ?>" name="search" size="17" />
                         </form>
                     </li>
                     <li class="HeaderSearchList-item" id="searchbar_log">
@@ -600,11 +599,6 @@ if ($_REQUEST['action']) {
                         <a class="HeaderNav-link LinkHeader Link" href="requests.php">
                             <?= t('server.common.requests') ?></a>
                     </li>
-                    <li class="HeaderNavList-item" id="nav_forums" <?=
-                                                                    Format::add_class($PageID, array('forums'), 'active', true) ?>>
-                        <a class="HeaderNav-link LinkHeader Link" href="forums.php">
-                            <?= t('server.common.forums') ?></a>
-                    </li>
                     <li class="HeaderNavList-item" id="nav_top10" <?=
                                                                     Format::add_class($PageID, array('top10'), 'active', true) ?>>
                         <a class="HeaderNav-link LinkHeader Link" href="top10.php">
@@ -614,11 +608,6 @@ if ($_REQUEST['action']) {
                                                                     Format::add_class($PageID, array('rules'), 'active', true) ?>>
                         <a class="HeaderNav-link LinkHeader Link" href="rules.php">
                             <?= t('server.common.rules') ?></a>
-                    </li>
-                    <li class="HeaderNavList-item" id="nav_wiki" <?=
-                                                                    Format::add_class($PageID, array('wiki'), 'active', true) ?>>
-                        <a class="HeaderNav-link LinkHeader Link" href="wiki.php">
-                            <?= t('server.common.wiki') ?></a>
                     </li>
                     <li class="HeaderNavList-item" id="nav_staff" <?=
                                                                     Format::add_class($PageID, array('staff'), 'active', true) ?>>
