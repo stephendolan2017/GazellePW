@@ -536,17 +536,23 @@ if ($_REQUEST['action']) {
             ?>
             <div class="HeaderSearch">
                 <ul class="HeaderSearchList">
-                    <li class="HeaderSearchList-item" id="searchbar_artists">
+                    <li class="HeaderSearchList-item" id="searchbar_torrents">
                         <span class="hidden">Torrents: </span>
                         <form class="HeaderSearch-form" name="torrents" action="torrents.php" method="get">
                             <? if ($UseAdvancedSearch) { ?>
-                            <input type="hidden" name="action" value="advanced" />
+                                <input type="hidden" name="action" value="advanced" />
                             <?    } ?>
                             <input class="Input InputHeader" type="text" id="torrentssearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
-                            ?> accesskey="t" spellcheck="false" placeholder="<?= t('server.index.moviegroups') ?>" name="<?= $UseAdvancedSearch ? 'groupname' : 'searchstr' ?>" size="17" />
+                                                                                                                ?> accesskey="t" spellcheck="false" placeholder="<?= t('server.index.moviegroups') ?>" name="<?= $UseAdvancedSearch ? 'groupname' : 'searchstr' ?>" size="17" />
                         </form>
                     </li>
-
+                    <li class="HeaderSearchList-item" id="searchbar_artists">
+                        <span class="hidden">Artist: </span>
+                        <form class="HeaderSearch-form" name="artists" action="artist.php" method="get">
+                            <input class="Input InputHeader" id="artistsearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
+                                                                                                    ?> accesskey="a" spellcheck="false" placeholder="<?= t('server.common.artists') ?>" type="text" name="artistname" size="17" />
+                        </form>
+                    </li>
                     <li class="HeaderSearchList-item" id="searchbar_requests">
                         <span class="hidden">Requests: </span>
                         <form class="HeaderSearch-form" name="requests" action="requests.php" method="get">
@@ -554,16 +560,18 @@ if ($_REQUEST['action']) {
                         </form>
                     </li>
                     <li class="HeaderSearchList-item" id="searchbar_forums">
+                        <span class="hidden">Forums: </span>
+                        <form class="HeaderSearch-form" name="forums" action="forums.php" method="get">
+                            <input value="search" type="hidden" name="action" />
+                            <input class="Input InputHeader" type="text" id="forumssearch" accesskey="f" placeholder="<?= t('server.common.forums') ?>" name="search" size="17" />
+                        </form>
+                    </li>
+
+                    <li class="HeaderSearchList-item" id="searchbar_users">
                         <span class="hidden">Users: </span>
                         <form class="HeaderSearch-form" name="users" action="user.php" method="get">
                             <input type="hidden" name="action" value="search" />
                             <input class="Input InputHeader" type="text" id="userssearch" accesskey="u" placeholder="<?= t('server.common.users') ?>" name="search" size="20" />
-                        </form>
-                    </li>
-                    <li class="HeaderSearchList-item" id="searchbar_log">
-                        <span class="hidden">Log: </span>
-                        <form class="HeaderSearch-form" name="log" action="log.php" method="get">
-                            <input class="Input InputHeader" type="text" id="logsearch" accesskey="l" placeholder="<?= t('server.common.log') ?>" name="search" size="17" />
                         </form>
                     </li>
                 </ul>
