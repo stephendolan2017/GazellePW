@@ -1792,7 +1792,7 @@ server.index.discuss: |-
 server.index.enable_users: |-
   Enabled users
 server.index.featured_item: |-
-  Featured Movie
+  Featured Media
 server.index.filled: |-
   filled
 server.index.fproduct: |-
@@ -3594,7 +3594,7 @@ server.tools.age: |-
 server.tools.album_id: |-
   Movie ID
 server.tools.featured_movie: |-
-  Featured Movie
+  Featured Media
 server.tools.all: |-
   All
 server.tools.all_current_torrents: |-
