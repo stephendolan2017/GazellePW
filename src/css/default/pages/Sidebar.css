@@ -16,9 +16,8 @@ SidebarList
 }
 
 .Sidebar-image {
-  height: 150px;
-  width: 150px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: cover;
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
@@ -118,8 +117,11 @@ SidebarList.is-ordered
   .SidebarItemPoster .SidebarItem-body {
     display: flex;
     justify-content: center;
+    height: 200px;
+    object-fit: cover;
   }
   .SidebarItemPoster-image {
-    width: 150px;
+    height: 200px;
+    object-fit: cover;
   }
 }
