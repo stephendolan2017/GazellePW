@@ -17,7 +17,8 @@ SidebarList
 
 .Sidebar-image {
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
+  width: fit-content;
 }
 
 @media (min-width: 425px) and (max-width: 768px) {

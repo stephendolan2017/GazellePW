@@ -27,7 +27,7 @@ if (is_number($FeaturedMovie['GroupID'])) {
         </div>
         <div class="SidebarItem-body Box-body">
             <a href="torrents.php?id=<?= $FeaturedMovie['GroupID'] ?>" data-tooltip="<?= Torrents::group_name($FeaturedMovie, false) ?>">
-                <img class="SidebarItemPoster-image" src="<?= ImageTools::process($FeaturedMovie['WikiImage'], true) ?>" alt="<?= Torrents::group_name($FeaturedMovie, false) ?>" />
+                <img class="Sidebar-image" src="<?= ImageTools::process($FeaturedMovie['WikiImage'], true) ?>" alt="<?= Torrents::group_name($FeaturedMovie, false) ?>" />
             </a>
         </div>
     </div>
