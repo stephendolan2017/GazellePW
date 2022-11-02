@@ -730,7 +730,7 @@ server.bookmarks.year: |-
 server.bookmarks.your_bookmarked_artists: |-
   Your bookmarked artists
 server.bookmarks.your_bookmarked_torrent_groups: |-
-  Your bookmarked movies
+  Your bookmarked media
 server.collages.a_collage_with_that_name_already_exists_1: |-
   A collage with that name already exists but needs to be recovered, please <a href="staffpm.php">contact</a> the staff team!
 server.collages.add_comment: |-
@@ -842,7 +842,7 @@ server.collages.locked: |-
 server.collages.manage_collage: |-
   Manage collage
 server.collages.manage_torrents: |-
-  Manage movies
+  Manage media
 server.collages.max_groups: |-
   Max groups
 server.collages.max_groups_per_user: |-
@@ -852,13 +852,13 @@ server.collages.name: |-
 server.collages.new_category: |-
   Category
 server.collages.new_category_note: |-
-  <li><strong>Theme:</strong> Movies relate to a certain theme (such as Wuxia Films, Films about War of Resistance against Japan);</li>
+  <li><strong>Theme:</strong> media relate to a certain theme (such as Wuxia Films, Films about War of Resistance against Japan);</li>
           <li><strong>Genre introduction:</strong> Subjective introductions about a film genre;</li>
-          <li><strong>Production company:</strong> All movies from a certain production company;</li>
-          <li><strong>Staff picks:</strong> Movies that are picked by staff or certain users;</li>
-          <li><strong>Awards:</strong> All movies that win or are mentioned in a certain award (Golden Rooster Award, Hundred Flowers Award, etc.);</li>
-                      <li><strong>Series:</strong> All movies of a certain series (Iron Man, The Avengers, etc.);</li>
-                      <li><strong>Critical compilation:</strong> All movies from a certain critical compilation (IMDb Top 1000, Douban Top 250, etc.);</li>
+          <li><strong>Production company:</strong> All media from a certain production company;</li>
+          <li><strong>Staff picks:</strong> media that are picked by staff or certain users;</li>
+          <li><strong>Awards:</strong> All media that win or are mentioned in a certain award (Golden Rooster Award, Hundred Flowers Award, etc.);</li>
+                      <li><strong>Series:</strong> All media of a certain series (Iron Man, The Avengers, etc.);</li>
+                      <li><strong>Critical compilation:</strong> All media from a certain critical compilation (IMDb Top 1000, Douban Top 250, etc.);</li>
 server.collages.new_category_note2: |-
   <li><strong>Personal:</strong> You can put whatever you want here. It is your own personal collage.</li>
 server.collages.new_create: |-
@@ -1810,7 +1810,7 @@ server.index.links: |-
 server.index.mon_visit: |-
   Users active this month
 server.index.moviegroups: |-
-  Movies
+  Media
 server.index.mystery: |-
   It's a mystery!
 server.index.peers: |-
@@ -1820,7 +1820,7 @@ server.index.period: |-
 server.index.poll: |-
   Poll
 server.index.popular_movies: |-
-  Popular Movies
+  Popular Media
 server.index.product_note: |-
   You may want to put an image here.
 server.index.product_page: |-
@@ -4872,7 +4872,7 @@ server.top10.most_used_request_tags: |-
 server.top10.most_used_torrent_tags: |-
   Most Used Torrent Tags
 server.top10.movies: |-
-  Movies
+  Media
 server.top10.name: |-
   Name
 server.top10.neg_votes: |-
@@ -4932,7 +4932,7 @@ server.top10.top_10_users: |-
 server.top10.top_donors: |-
   Top Donors
 server.top10.top_movies: |-
-  Movies
+  Media
 server.top10.top_n_donors: |-
   Top Donors
 server.top10.top_torrents: |-
@@ -5105,7 +5105,7 @@ server.torrents.diy: |-
 server.torrents.diy_slot: |-
   DIY Slot
 server.torrents.diy_slot_requirements: |-
-  Only for non-Chinese movies. Must add least a Chinese dub or a Chinese special effects subtitle to the disc copy.
+  Only for non-Chinese media. Must add least a Chinese dub or a Chinese special effects subtitle to the disc copy.
 server.torrents.douban_id: |-
   Douban ID
 server.torrents.dupe: |-
@@ -5163,7 +5163,7 @@ server.torrents.feature: |-
 server.torrents.feature_slot: |-
   Feature Slot
 server.torrents.feature_slot_requirements: |-
-  Only for non-Chinese movies. Must contain a softcoded Chinese subtitle. Must add least a Chinese dub or a Chinese special effects subtitle to the encode.
+  Only for non-Chinese media. Must contain a softcoded Chinese subtitle. Must add least a Chinese dub or a Chinese special effects subtitle to the encode.
 server.torrents.file_names: |-
   File Names
 server.torrents.first_torrent: |-
@@ -5909,7 +5909,7 @@ server.upload.movie_edition_information_label: |-
 server.upload.movie_feature: |-
   Recording type
 server.upload.movie_feature_note: |-
-  <strong>Note: </strong>only non-Chinese movies can use these marks.
+  <strong>Note: </strong>only non-Chinese media can use these marks.
 server.upload.movie_fill: |-
   Auto-Fill
 server.upload.movie_imdb: |-
@@ -6072,7 +6072,7 @@ server.upload.torrent_info_how_to_blockquote: |-
   It's recommended to put explaining text before the screenshots, for example <a href="torrents.php?torrentid=1" target="_blank">this torrent</a>.<br/>
   Please consult our <a href="rules.php?p=upload" target="_blank">rules</a> for more information on required information.<br/><br/>
   <strong>Subtitles:</strong> Please notice the differences between the force subtitle and the hardcoded subtitle, you may read <a href="wiki.php?action=article&id=44" target="_blank">this article</a>.<br/><br/>
-  <strong>Feature torrent:</strong> Only <strong class="u-colorWarning">non-Chinese movies</strong> can use these marks (dialects like Cantonese are considered as Chinese).
+  <strong>Feature torrent:</strong> Only <strong class="u-colorWarning">non-Chinese media</strong> can use these marks (dialects like Cantonese are considered as Chinese).
 server.upload.torrent_info_how_to_toggle: |-
   &nbsp;How to fill information below&nbsp;
 server.upload.torrent_rule: |-
@@ -6722,9 +6722,9 @@ server.user.one_of_these_artists: |-
 server.user.one_of_these_users: |-
   One of these users
 server.user.only_new_releases: |-
-  Only new movies
+  Only new media
 server.user.only_new_releases_label: |-
-  Only notify for new movies, not new torrents
+  Only notify for new media, not new torrents
 server.user.only_these_categories: |-
   Only these categories
 server.user.only_these_codecs: |-
