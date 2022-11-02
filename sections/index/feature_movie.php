@@ -21,7 +21,7 @@ if (is_number($FeaturedMovie['GroupID'])) {
 ?>
     <div class="SidebarItemPoster SidebarItem Box">
         <div class="SidebarItem-header Box-header">
-            <a class="SidebarItem-headerTitle">
+            <a class="SidebarItem-headerTitle" href="torrents.php?id=<?= $FeaturedMovie['GroupID'] ?>">
                 <?= t('server.index.featured_item') ?>
             </a>
         </div>
