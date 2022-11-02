@@ -546,13 +546,6 @@ if ($_REQUEST['action']) {
                                                                                                                 ?> accesskey="t" spellcheck="false" placeholder="<?= t('server.index.moviegroups') ?>" name="<?= $UseAdvancedSearch ? 'groupname' : 'searchstr' ?>" size="17" />
                         </form>
                     </li>
-                    <li class="HeaderSearchList-item" id="searchbar_artists">
-                        <span class="hidden">Artist: </span>
-                        <form class="HeaderSearch-form" name="artists" action="artist.php" method="get">
-                            <input class="Input InputHeader" id="artistsearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
-                                                                                                    ?> accesskey="a" spellcheck="false" placeholder="<?= t('server.common.artists') ?>" type="text" name="artistname" size="17" />
-                        </form>
-                    </li>
                     <li class="HeaderSearchList-item" id="searchbar_requests">
                         <span class="hidden">Requests: </span>
                         <form class="HeaderSearch-form" name="requests" action="requests.php" method="get">
