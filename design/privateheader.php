@@ -535,18 +535,7 @@ if ($_REQUEST['action']) {
             }
             ?>
             <div class="HeaderSearch">
-                <ul class="HeaderSearchList">
-                    <li class="HeaderSearchList-item" id="searchbar_torrents">
-                        <span class="hidden">Torrents: </span>
-                        <form class="HeaderSearch-form" name="torrents" action="torrents.php" method="get">
-                            <? if ($UseAdvancedSearch) { ?>
-                                <input type="hidden" name="action" value="advanced" />
-                            <?    } ?>
-                            <input class="Input InputHeader" type="text" id="torrentssearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
-                                                                                                                ?> accesskey="t" spellcheck="false" placeholder="<?= t('server.index.moviegroups') ?>" name="<?= $UseAdvancedSearch ? 'groupname' : 'searchstr' ?>" size="17" />
-                        </form>
-                    </li>
-                    <li class="HeaderSearchList-item" id="searchbar_artists">
+                                    <li class="HeaderSearchList-item" id="searchbar_artists">
                         <span class="hidden">Artist: </span>
                         <form class="HeaderSearch-form" name="artists" action="artist.php" method="get">
                             <input class="Input InputHeader" id="artistsearch" autocomplete="off" <?= Users::has_autocomplete_enabled('search');
