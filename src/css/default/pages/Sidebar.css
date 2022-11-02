@@ -114,7 +114,6 @@ SidebarList.is-ordered
     justify-content: center;
   }
   .SidebarItemPoster-image {
-    width: 150px;
     height: 150px;
     object-fit: cover;
   }
